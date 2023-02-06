@@ -40,14 +40,14 @@ module WHISKER
       g.skip_routes true
       g.assets false
       g.helper false
-      g.test_framework false :rspec,
-                              view_specs: false,
-                              helper_specs: false,
-                              routing_specs: false,
-                              controller_specs: false,
-                              request_specs: true,
-                              model_spec: true,
-                              fixtures: true
+      g.test_framework :rspec,
+                        view_specs: false,
+                        helper_specs: false,
+                        routing_specs: false,
+                        controller_specs: false,
+                        request_specs: true,
+                        model_spec: true,
+                        fixtures: true
     end
   end
 end
