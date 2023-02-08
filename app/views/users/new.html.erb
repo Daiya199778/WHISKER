@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1>ユーザー登録</h1>
+      <%= form_with model: @user, local: true do |f| %>
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+          <input type="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+          <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping">
+        </div>       
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+          <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
+        </div>       
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+          <input type="password_confirmation" class="form-control" placeholder="Password_confirmation" aria-label="Password_confirmation" aria-describedby="addon-wrapping">
+        </div>       
+        <%= f.submit '登録', class: 'btn btn-primary' %>
+      <% end %>
+      <div class='text-center'>
+        <%= link_to 'ログインページへ', login_path %>
+      </div>
+    </div>
+  </div>
+</div>
