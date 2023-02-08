@@ -5,7 +5,7 @@ ja:
     logout: 'ログアウト'
   users:
     new:
-      title: 'ユーザー登録'
+      title: '新規登録'
       to_login_page: 'ログインページへ'
   user_sessions:
     new:
