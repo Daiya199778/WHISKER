@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root 'static_pages#top'
 
   #ログイン機能のルーティング
-  get 'login', to: 'user_session#new'
-  post 'login', to: 'user_session#create'
-  delete 'logout', to: 'user_session#destroy'
+  get 'login', to: 'user_sessions#new'
+  post 'login', to: 'user_sessions#create'
+  delete 'logout', to: 'user_sessions#destroy'
 
   #ユーザーの新規登録機能
   resources :users, only: %i[new create]
