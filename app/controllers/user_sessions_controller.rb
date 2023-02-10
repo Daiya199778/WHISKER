@@ -1,4 +1,5 @@
 class UserSessionsController < ApplicationController
+  #ユーザー登録画面にてnewアクションとcreateアクションはログインしなくても使えるようにskip_before_action
   skip_before_action :require_login, only: %i[new create]
   def new ;end
 
