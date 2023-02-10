@@ -1,5 +1,7 @@
 ja:
   defaults:
+    message:
+      require_login: 'ログインしてください'
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
@@ -22,11 +24,15 @@ ja:
       success: 'ログアウトしました'
   posts:
     index:
-      title: '掲示板一覧'
+      title: '投稿一覧'
+      no_result: '投稿がありません'
     new:
-      title: '掲示板作成'
+      title: '新規投稿作成'
     bookmarks:
-      title: 'ブックマーク一覧'
+      title: 'ブックマーク'
   profiles:
     show:
       title: 'プロフィール'
+  studies:
+    show:
+      title: 'ウイスキー豆知識'
