@@ -1,5 +1,7 @@
 ja:
   defaults:
+    message:
+      require_login: 'ログインしてください'
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
@@ -23,6 +25,7 @@ ja:
   posts:
     index:
       title: '掲示板一覧'
+      no_result: '投稿がありません'
     new:
       title: '掲示板作成'
     bookmarks:

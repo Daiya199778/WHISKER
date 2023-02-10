@@ -3,10 +3,12 @@
   <div class="row">
       <div class="col-12">
         <div class="row">
-          <% if @boards.present? %>
-            <%= render @boards %>
+          <% if @posts.present? %>
+            <%= render @posts %>
           <% else %>
-            <p><%= t('.no_result') %></p>
+            <div class="row justify-content-center">
+              <p class="col-auto"><%= t('.no_result') %></p>
+            </div>
           <% end %>
         </div>
       </div>
