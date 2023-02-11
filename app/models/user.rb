@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  #Userモデルに、postモデルとの関連付けを追加
+  has_many :posts, dependent: :destroy
 
   validates :password, length: { minimum: 5 }, if: -> { new_record? || changes[:crypted_password] }
     #passwordの長さを５文字以上に設定
