@@ -1,0 +1,31 @@
+<%= form_with model: post, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control', rows: 10 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :whiskey_brand %>
+    <%= f.text_field :whiskey_brand, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.fields_for :countries, post.countries.build do |country| %>
+      <%= country.label :name %>
+      <%= country.text_field :name, class: 'form-control' %>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.fields_for :whiskey_types, post.whiskey_types.build do |whiskey_type| %>
+      <%= whiskey_type.label :name %>
+      <%= whiskey_type.text_field :name, class: 'form-control' %>
+    <% end %>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

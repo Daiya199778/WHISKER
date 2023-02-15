@@ -28,6 +28,10 @@ ja:
       no_result: '投稿がありません'
     new:
       title: '新規投稿作成'
+      create: '新規投稿する'
+    create:
+      success: '投稿を作成しました'
+      fail: '投稿を作成できませんでした'
     bookmarks:
       title: 'ブックマーク'
   profiles:

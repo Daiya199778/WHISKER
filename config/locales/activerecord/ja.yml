@@ -13,5 +13,9 @@ ja:
         title: 'タイトル'
         body: '本文'
         whiskey_brand: '銘柄'
+      whiskey_type:
+        name: '原材料'
+      country:
+        name: '原産国'
         
 
