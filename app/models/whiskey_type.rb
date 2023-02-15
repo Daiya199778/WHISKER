@@ -1,4 +1,4 @@
 class WhiskeyType < ApplicationRecord
-  belongs_to :Post
+  belongs_to :post, optional: true
   validates :name, presence: true
 end

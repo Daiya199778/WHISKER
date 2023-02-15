@@ -11,6 +11,6 @@ class Post < ApplicationRecord
   accepts_nested_attributes_for :countries, allow_destroy: true
 
   has_many :whiskey_types, dependent: :destroy
-  accepts_nested_attributes_for :whiskey_types
+  accepts_nested_attributes_for :whiskey_types,  allow_destroy: true
 
 end

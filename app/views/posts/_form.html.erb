@@ -1,4 +1,4 @@
-<%= form_with model: @post, local: true do |f| %>
+<%= form_with model: post, local: true do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
@@ -16,9 +16,15 @@
     <%= f.text_field :whiskey_brand, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.fields_for :countries do |country| %>
+    <%= f.fields_for :countries, post.countries.build do |country| %>
       <%= country.label :name %>
       <%= country.text_field :name, class: 'form-control' %>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.fields_for :whiskey_types, post.whiskey_types.build do |whiskey_type| %>
+      <%= whiskey_type.label :name %>
+      <%= whiskey_type.text_field :name, class: 'form-control' %>
     <% end %>
   </div>
   <%= f.submit class: 'btn btn-primary' %>
