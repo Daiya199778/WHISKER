@@ -6,6 +6,9 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    #binding.pry
+    @post.countries.build
+    #@post = WhiskeyType.new
   end
 
   def create
@@ -27,6 +30,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :image, :price, :whiskey_brand)
+    params.require(:post).permit(:title, :body, :image, :price, :whiskey_brand, countries_attributes: [:name, :_destroy])
   end
 end
