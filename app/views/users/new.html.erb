@@ -6,6 +6,7 @@
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5"><%= t '.title' %></h5>
             <%= form_with model: @user, local: true do |f| %>
+              <%= render 'shared/error_messages', object: f.object %>
               <div class="form-floating mb-3">
                 <%= f.label :name %>
                 <%= f.text_field :name, class: 'form-control', placeholder: 'Nickname' %>
@@ -16,7 +17,7 @@
               </div>
               <div class="form-floating mb-3">
                 <%= f.label :password %>
-                <%= f.password_field :password, class: 'form-control', placeholder: 'Password ※5文字以上' %>
+                <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
               </div>
               <div class="form-floating mb-3">
                 <%= f.label :password_confirmation %>

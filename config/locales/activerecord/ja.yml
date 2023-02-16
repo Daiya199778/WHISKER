@@ -13,6 +13,7 @@ ja:
         title: 'タイトル'
         body: '本文'
         whiskey_brand: '銘柄'
+        price: '価格'
       whiskey_type:
         name: '原材料'
       country:

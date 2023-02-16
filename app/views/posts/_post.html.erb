@@ -10,32 +10,36 @@
         <div class="card-body">
           <h4 class="card-title">
             <a href="#">
+              <i class="bi bi-book"></i>
               <%= post.title %>
             </a>
           </h4>
-          <ul class="list-inline">
-            <li class="list-inline-item">
-              <%= icon 'far', 'user' %>
-              <!-- post.user.nameでユーザーネームを定義する-->
-              <%= post.user.name %>
-            </li>
-            <li class="list-inline-item">
-              <%= icon 'far', 'calendar' %>
-              <%= l post.created_at, format: :long %>
-            </li>
-          </ul>
-          <p class="card-text"><%= post.body %></p>
+          <p class="card-text">
+            <%= icon 'far', 'user' %>
+            <!-- post.user.nameでユーザーネームを定義する-->
+            <%= post.user.name %>
+          </p>
+          <p class="card-text">
+            <%= icon 'far', 'calendar' %>
+            <%= l post.created_at, format: :long %>
+          </p>
           <p class="card-text">
             <% post.whiskey_types.each do |whiskey_type| %>
               <%# binding.pry %> 
+              <i class="bi bi-trash2-fill"></i>
               <%= whiskey_type.name %>
             <% end %> 
           </p>
           <p class="card-text">
             <% post.countries.each do |country| %>
                 <%# binding.pry %> 
+                <i class="bi bi-pin-map-fill"></i>
                 <%= country.name %>
             <% end %> 
+          </p>
+          <p class="card-text">
+            <i class="bi bi-cash-coin"></i>
+            <%= post.price %>
           </p>
           <div class='mr10 float-right'>
             <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
