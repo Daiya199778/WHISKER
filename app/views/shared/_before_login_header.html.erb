@@ -1,15 +1,18 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light text-dark bg-dark">
-      <%= link_to root_path, class: 'navbar-brand' do %>
-        <%= image_tag 'logo.png' %>
-      <% end %>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= image_tag 'logo.png' %>
+    <% end %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto main-nav align-items-center">
         <li class="nav-item">
-          <%= link_to '投稿一覧', '#', class: 'nav-link text-white' %>
+          <%= link_to '投稿一覧', posts_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to (t'defaults.login'), login_path ,class: 'nav-link text-white' %>
+          <%= link_to (t'defaults.login'), login_path ,class: 'nav-link' %>
         </li>
       </ul>
     </div>

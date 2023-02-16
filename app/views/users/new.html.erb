@@ -1,29 +1,39 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1><%= t '.title' %></h1>
-      <%= form_with model: @user, local: true do |f| %>
-        <div class="form-group">
-          <%= f.label :name %>
-          <%= f.text_field :name, class: 'form-control' %>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5"><%= t '.title' %></h5>
+            <%= form_with model: @user, local: true do |f| %>
+              <div class="form-floating mb-3">
+                <%= f.label :name %>
+                <%= f.text_field :name, class: 'form-control', placeholder: 'Nickname' %>
+              </div>
+              <div class="form-floating mb-3">
+                <%= f.label :email %>
+                <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+              </div>
+              <div class="form-floating mb-3">
+                <%= f.label :password %>
+                <%= f.password_field :password, class: 'form-control', placeholder: 'Password ※5文字以上' %>
+              </div>
+              <div class="form-floating mb-3">
+                <%= f.label :password_confirmation %>
+                <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password確認用' %>
+              </div>
+              <br>
+              <div class='text-center'>
+                <%= f.submit (t'defaults.register'), class: 'btn btn-primary' %>
+              </div>
+              <br>
+              <div class='text-center'>
+                <%= link_to (t'.to_login_page'), login_path %>
+              </div>
+            <% end %>
+           </div>
         </div>
-        <div class="form-group">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
-        </div>
-        <%= f.submit (t'defaults.register'), class: 'btn btn-primary' %>
-      <% end %>
-      <div class='text-center'>
-        <%= link_to (t'.to_login_page'), login_path %>
       </div>
     </div>
-  </div>
-</div>
+  </div>      
+</body>     
