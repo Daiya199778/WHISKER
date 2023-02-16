@@ -62,3 +62,7 @@ gem 'jquery-rails'
 gem 'sorcery'
 gem 'pry-byebug'
 gem 'rails-i18n'
+#画像を投稿するためのgem
+gem 'carrierwave'
+#画像のサイズ調整のためのgem
+gem 'mini_magick'
