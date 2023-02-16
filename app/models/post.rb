@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  #Board モデルに、アップローダーの仕様を宣言しておく
+  mount_uploader :post_image, PostImageUploader
   belongs_to :user
   
   validates :title, presence: true, length: { maximum: 255 }

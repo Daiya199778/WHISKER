@@ -2,9 +2,7 @@
   <div id="post-id-<%= post.id %>">
     <div class="row">
       <div class="col-md-7">
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="https://via.placeholder.com/700x300" alt="">
-        </a>
+        <%= image_tag post.post_image_url, class: 'card-img-top', size: '700x300' %>
       </div>
       <div class="col-md-5">
         <div class="card-body">

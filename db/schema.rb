@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_13_064755) do
+ActiveRecord::Schema.define(version: 2023_02_16_084135) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2023_02_13_064755) do
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
     t.string "body", null: false
-    t.string "image"
+    t.string "post_image"
     t.integer "price", null: false
     t.string "whiskey_brand", null: false
     t.integer "user_id", null: false
