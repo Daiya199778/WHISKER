@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_16_084135) do
+ActiveRecord::Schema.define(version: 2023_02_17_131401) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.integer "user_id", null: false
+    t.integer "post_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "countries", force: :cascade do |t|
     t.string "name", null: false
@@ -51,6 +61,8 @@ ActiveRecord::Schema.define(version: 2023_02_16_084135) do
     t.index ["post_id"], name: "index_whiskey_types_on_post_id"
   end
 
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
   add_foreign_key "countries", "posts"
   add_foreign_key "posts", "users"
   add_foreign_key "whiskey_types", "posts"

@@ -2,6 +2,7 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
   #Userモデルに、postモデルとの関連付けを追加
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :name, presence: true
   #uniqueness: true => メールアドレスの重複を防ぐ ＆ presence: true => 空白入力を防ぐ
