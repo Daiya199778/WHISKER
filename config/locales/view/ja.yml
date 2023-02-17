@@ -34,6 +34,9 @@ ja:
     create:
       success: '投稿を作成しました'
       fail: '投稿を作成できませんでした'
+    show:
+      title: '投稿詳細'
+      category: 'カテゴリー'
     bookmarks:
       title: 'ブックマーク'
   profiles:

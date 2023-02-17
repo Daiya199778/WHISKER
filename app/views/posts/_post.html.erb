@@ -7,10 +7,7 @@
       <div class="col-md-5">
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">
-              <i class="bi bi-book"></i>
-              <%= post.title %>
-            </a>
+            <i class="bi bi-book"><%= link_to post.title, post_path(post) %></i>
           </h4>
           <p class="card-text">
             <%= icon 'far', 'user' %>
@@ -24,14 +21,14 @@
           <p class="card-text">
             <% post.whiskey_types.each do |whiskey_type| %>
               <%# binding.pry %> 
-              <i class="bi bi-trash2-fill"></i>
+              <i class="bi bi-bricks"></i>
               <%= whiskey_type.name %>
             <% end %> 
           </p>
           <p class="card-text">
             <% post.countries.each do |country| %>
                 <%# binding.pry %> 
-                <i class="bi bi-pin-map-fill"></i>
+                <i class="bi bi-globe-asia-australia"></i>
                 <%= country.name %>
             <% end %> 
           </p>
