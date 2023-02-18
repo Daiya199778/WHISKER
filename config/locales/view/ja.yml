@@ -5,6 +5,7 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    comment: 'コメント' 
   users:
     new:
       title: '新規登録'
@@ -33,12 +34,16 @@ ja:
       create: '新規投稿する'
     create:
       success: '投稿を作成しました'
-      fail: '投稿を作成できませんでした'
+      fail: '投稿を作成できません'
     show:
       title: '投稿詳細'
       category: 'カテゴリー'
     bookmarks:
       title: 'ブックマーク'
+  comments:
+    create:
+      success: 'コメントを投稿しました'
+      fail: 'コメントを投稿できません'
   profiles:
     show:
       title: 'プロフィール'

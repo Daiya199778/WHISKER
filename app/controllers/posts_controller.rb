@@ -26,6 +26,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    #詳細画面に新しいもの順にコメントが表示される
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
 
   private
