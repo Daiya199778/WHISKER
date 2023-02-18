@@ -38,6 +38,14 @@ ja:
     show:
       title: '投稿詳細'
       category: 'カテゴリー'
+    edit:
+      title: '投稿編集'
+    update:
+      success: '投稿を編集しました'
+      fail: '投稿を編集できません'
+    destroy:
+      success: '投稿を削除しました'
+      fail: '投稿を削除できません'
     bookmarks:
       title: 'ブックマーク'
   comments:
