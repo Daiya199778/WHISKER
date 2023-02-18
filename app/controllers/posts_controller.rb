@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
+  #set_postの一文を定義している
+  before_action :set_post, only: [:edit, :update, :destroy]
+
   def index
     #投稿のデータを引っ張ってくる際に、関連付けされたモデルのデータも一緒に取得するために「includes(user)」を使う
     @posts = Post.all.includes(:user).order(created_at: :desc)
@@ -31,12 +34,9 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
 
-  def edit
-    @post = current_user.posts.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @post = current_user.posts.find(params[:id])
     if @post.update(post_params)
       redirect_to @post, success: t('posts.update.success')
     else
@@ -46,12 +46,16 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = current_user.posts.find(params[:id])
     @post.destroy!
     redirect_to posts_path, success: t('posts.destroy.success')
   end
 
   private
+
+  def set_post
+    #edit/update/destroyアクションで使う下記の一文をまとめて記載
+    @post = current_user.posts.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:title, :body, :post_image, :post_image_cache, :price, :whiskey_brand, countries_attributes: [:id, :name, :_destroy], whiskey_types_attributes: [:id, :name, :_destroy])

@@ -26,7 +26,7 @@
           <% end %> 
 
           <i class="bi bi-cash-coin"> <%= @post.price %></i>
-          <%= render 'crud_menus', post: @post %>
+          <%= render 'crud_menus', post: @post if current_user.own?(@post) %>
         </div>
       </div>
     </div>

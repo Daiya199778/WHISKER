@@ -2,6 +2,7 @@ ja:
   defaults:
     message:
       require_login: 'ログインしてください'
+      delete_confirm: '削除してもよろしいですか？'
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
