@@ -9,5 +9,8 @@ Rails.application.routes.draw do
 
   #ユーザーの新規登録機能
   resources :users, only: %i[new create]
-  resources :posts, only: %i[index new create]
+  resources :posts, only: %i[index new create show] do
+    resources :comments, only: %i[create], shallow: true
+  end
+
 end

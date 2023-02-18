@@ -2,6 +2,7 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
   #Userモデルに、postモデルとの関連付けを追加
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :name, presence: true
   #uniqueness: true => メールアドレスの重複を防ぐ ＆ presence: true => 空白入力を防ぐ
@@ -13,4 +14,10 @@ class User < ApplicationRecord
   #password, confirmation => passwordというDBに存在しない仮想的な属性(virtual attributes)が追加される。という意味。
   #if: 以降=> 登録したユーザがパスワード以外のプロフィール項目を更新したいとき、パスワードの入力を省略できるようになる。
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
+
+  #ユーザーのコメントであるかを判定するメソッドを user モデルに追加する
+  def own?(object)
+    id == object.user_id
+  end
+
 end

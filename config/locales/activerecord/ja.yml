@@ -1,6 +1,7 @@
 ja:
   activerecord:
     models:
+      comment: 'コメント'
       user: 'ユーザー'
       post: '投稿'
     attributes:
@@ -15,6 +16,8 @@ ja:
         whiskey_brand: '銘柄'
         price: '価格'
         post_image: 'サムネイル'
+      comment:
+        body: 'コメント'
       whiskey_type:
         name: '原材料'
       country:

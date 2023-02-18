@@ -1,0 +1,38 @@
+<div class="container">
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4"><%= t('.title') %></h1>
+  <!-- Portfolio Item Row -->
+  <div class="row">
+    <div class="col-md-6">
+      <img class="img-fluid" src="https://via.placeholder.com/750x500" alt="">
+    </div>
+    <div class="col-lg-6">
+      <div class="card mb-3 mb-lg-0">
+        <div class="card-body">
+          <h3 class="my-3"><%= @post.title %></h3>
+          <h5 class="my-3"><%= @post.body %></h5>
+          <hr>
+          <h3 class="my-3"><%= t('.category')%></h3>
+
+          <p class="bi bi-trash2-fill"> <%= @post.whiskey_brand %></p>
+
+          <% @post.whiskey_types.each do |whiskey_type| %>
+            <p class="bi bi-bricks"> <%= whiskey_type.name %></p>
+          <% end %>
+
+          <% @post.countries.each do |country| %>
+            <p class="bi bi-globe-asia-australia"> <%= country.name %></p>
+          <% end %> 
+
+          <i class="bi bi-cash-coin"> <%= @post.price %></i>
+          <%= render 'crud_menus', post: @post %>
+        </div>
+      </div>
+    </div>
+ </div>
+  <h3 class="my-4">コメント</h3> 
+  <!-- コメントフォーム -->
+  <%= render 'comments/form', { post: @post, comment: @comment } %>
+  <!-- コメントエリア -->
+  <%= render partial: 'comments/comment', collection: @comments %>
+</div>
