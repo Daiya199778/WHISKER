@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :posts do
     resources :comments, only: %i[create], shallow: true
-
     # /posts/bookmarksのURLを作っている。このURLのブックマークの一覧を表示する。
     collection do
       get 'bookmarks'
