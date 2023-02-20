@@ -50,6 +50,10 @@ class PostsController < ApplicationController
     redirect_to posts_path, success: t('posts.destroy.success')
   end
 
+  def bookmarks
+    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+  end
+
   private
 
   def set_post
