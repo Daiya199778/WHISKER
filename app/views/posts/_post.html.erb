@@ -36,8 +36,6 @@
             <i class="bi bi-cash-coin"></i>
             <%= post.price %>
           </p>
-          <%# if current_user.own?(post)を入れることによって、自分以外の投稿に「編集」「削除」を表示しなくできる！ %>
-          <%= render 'crud_menus', post: post if current_user.own?(post)%>
         </div>
       </div>
     </div>

@@ -53,9 +53,9 @@ ja:
     create:
       success: 'コメントを投稿しました'
       fail: 'コメントを投稿できません'
-  profiles:
+  mypages:
     show:
-      title: 'プロフィール'
+      title: 'マイページ'
   studies:
     show:
       title: 'ウイスキー豆知識'
