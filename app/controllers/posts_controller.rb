@@ -5,7 +5,8 @@ class PostsController < ApplicationController
 
   def index
     #投稿のデータを引っ張ってくる際に、関連付けされたモデルのデータも一緒に取得するために「includes(user)」を使う
-    @posts = Post.all.includes(:user).order(created_at: :desc)
+    #@posts = Post.all.includes(:user).order(created_at: :desc)
+    @posts = Post.all.includes([:user, :bookmarks]).order(created_at: :desc)
   end
 
   def new
@@ -52,6 +53,11 @@ class PostsController < ApplicationController
 
   def bookmarks
     @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+  end
+
+  private
+
+  def board_params
   end
 
   private

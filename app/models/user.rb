@@ -5,8 +5,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :bookmarks, dependent: :destroy
   #なぜ、引数が「bookmark_posts」になるかというと、投稿元のモデル（post）はhas_manyで使われているから使えない！
-  #その代わりに、「through: :posts, source: :post」の「source: :post」を追加するのことによって、postモデルのことですよ！と明示している！
-  has_many :bookmark_posts, through: :posts, source: :post
+  #その代わりに、「through: :bookmarks, source: :post」の「source: :post」を追加するのことによって、postモデルのことですよ！と明示している！
+  has_many :bookmark_posts, through: :bookmarks, source: :post
 
   validates :name, presence: true
   #uniqueness: true => メールアドレスの重複を防ぐ ＆ presence: true => 空白入力を防ぐ
@@ -34,13 +34,13 @@ class User < ApplicationRecord
   end
 
   #unbookmarkメソッド
-  #bookmarks_postsからpostの引数に入っている掲示板idが入ったレコードを探し出して削除（delete)するメソッド。
+  #bookmarks_postsからpostの引数に入っている投稿idが入ったレコードを探し出して削除（delete)するメソッド。
   def unbookmark(post)
     bookmark_posts.destroy(post)
   end
 
   #bookmark?メソッド
-  #bookmarks_postsにpostの引数に入っている掲示板idが含まれているレコードがあるかどうか判定するメソッド。
+  #bookmarks_postsにpostの引数に入っている投稿idが含まれているレコードがあるかどうか判定するメソッド。
   def bookmark?(post)
     bookmark_posts.include?(post)
   end
