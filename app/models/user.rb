@@ -3,6 +3,10 @@ class User < ApplicationRecord
   #Userモデルに、postモデルとの関連付けを追加
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  #なぜ、引数が「bookmark_posts」になるかというと、投稿元のモデル（post）はhas_manyで使われているから使えない！
+  #その代わりに、「through: :bookmarks, source: :post」の「source: :post」を追加するのことによって、postモデルのことですよ！と明示している！
+  has_many :bookmark_posts, through: :bookmarks, source: :post
 
   validates :name, presence: true
   #uniqueness: true => メールアドレスの重複を防ぐ ＆ presence: true => 空白入力を防ぐ
@@ -18,6 +22,27 @@ class User < ApplicationRecord
   #ユーザーのコメントであるかを判定するメソッドを user モデルに追加する
   def own?(object)
     id == object.user_id
+  end
+
+  #bookmarkメソッド
+  #掲示板の情報のレコードが引数boardに格納されbookmarks_boardsに<<演算子で追加されている。
+  #<<は指定されたオブジェクトの末尾に破壊的に追加できるメソッド。
+  #強制的に追加されて保存もされているのでsaveメソッドなどは必要ない。
+  #bookmarks_posts << postはbookmarks.create!(post_id: post.id)と同様の処理がされている。
+  def bookmark(post)
+    bookmark_posts << post
+  end
+
+  #unbookmarkメソッド
+  #bookmarks_postsからpostの引数に入っている投稿idが入ったレコードを探し出して削除（delete)するメソッド。
+  def unbookmark(post)
+    bookmark_posts.destroy(post)
+  end
+
+  #bookmark?メソッド
+  #bookmarks_postsにpostの引数に入っている投稿idが含まれているレコードがあるかどうか判定するメソッド。
+  def bookmark?(post)
+    bookmark_posts.include?(post)
   end
 
 end

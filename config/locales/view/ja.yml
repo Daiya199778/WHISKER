@@ -49,6 +49,12 @@ ja:
       fail: '投稿を削除できません'
     bookmarks:
       title: 'ブックマーク'
+      no_result: 'ブックマーク中の投稿がありません'
+  bookmarks:
+    create:
+      success: 'ブックマークしました'
+    destroy:
+      success: 'ブックマークを解除しました'
   comments:
     create:
       success: 'コメントを投稿しました'
