@@ -1,7 +1,7 @@
 <tr id="comment-<%= comment.id %>">
   <td style="width: 60px">
-    <%= image_tag 'sample.png', class: 'rounded-circle', size: '50x50' %>
-     <a><%= comment.user.name %></a>
+    <%= image_tag 'sample.png', class: 'rounded-circle', size: '30x30' %>
+     <p><%= comment.user.name %></p>
   </td>
   <td>
     <h3 class="small"></h3>
@@ -20,13 +20,17 @@
       <ul class="list-inline justify-content-center" style="float: right;">
         <li class="list-inline-item">
           <a href="#" class='js-edit-comment-button' data-comment-id="<%= comment.id %>">
-            <%= icon 'fa', 'pen', class: 'pr-1' %>
+            <%= icon 'fa', 'pen' %>
           </a>
         </li>
         <li class="list-inline-item">
-          <a href="#" class='js-delete-comment-button' data-comment-id="<%= comment.id %>">
-            <%= icon 'fas', 'trash', class: 'pr-1' %>
-          </a>
+          <%= link_to comment_path(comment),
+                      class: 'js-delete-comment-button',
+                      method: :delete,
+                      data: { confirm: t('defaults.message.delete_confirm') },
+                      remote: true do %>
+            <%= icon 'fa', 'trash' %>
+          <% end %>
         </li>
       </ul>
     </td>

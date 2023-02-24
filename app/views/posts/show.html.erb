@@ -35,6 +35,5 @@
   <!-- コメントフォーム -->
   <%= render 'comments/form', { post: @post, comment: @comment } %>
   <!-- コメントエリア -->
-  <%= render partial: 'comments/comment', collection: @comments %>
-  <%# <% render 'comments/comments', { comments: @comments } %>
+  <%= render 'comments/comments', { comments: @comments } %>
 </div>
