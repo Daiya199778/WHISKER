@@ -5,7 +5,7 @@
   <!-- Portfolio Item Row -->
   <div class="row">
     <div class="col-md-6">
-      <img class="img-fluid" src="https://via.placeholder.com/750x500" alt="">
+      <%= image_tag @post.post_image_url, class: 'card-img-top', size: '700x355' %>
     </div>
     <div class="col-lg-6">
       <div class="card mb-3 mb-lg-0">
@@ -35,5 +35,5 @@
   <!-- コメントフォーム -->
   <%= render 'comments/form', { post: @post, comment: @comment } %>
   <!-- コメントエリア -->
-  <%= render partial: 'comments/comment', collection: @comments %>
+  <%= render 'comments/comments', { comments: @comments } %>
 </div>

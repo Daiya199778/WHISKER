@@ -1,14 +1,28 @@
 class CommentsController < ApplicationController
   def create
-    comment = current_user.comments.build(comment_params)
-    if comment.save
-      redirect_to post_path(comment.post), success: t('comments.create.success')
-    else
-      redirect_to post_path(comment.post), danger: t('comments.create.fail')
-    end
+    @comment = current_user.comments.build(comment_params)
+    @comment.save
   end
 
+  def destroy
+    @comment = current_user.comments.find(params[:id])
+    @comment.destroy!
+  end
+  
+  def update
+    @comment = current_user.comments.find(params[:id])
+    if @comment.update(comment_update_params)
+      render json: { comment: @comment }, status: :ok
+    else
+      render json: { comment: @comment, errors: { messages: @comment.errors.full_messages } }, status: :bad_request
+    end
+  end
+  
   private
+
+  def comment_update_params
+    params.require(:comment).permit(:body)
+  end
 
   def comment_params
     params.require(:comment).permit(:body).merge(post_id: params[:post_id])
