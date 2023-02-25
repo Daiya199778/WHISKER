@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def index
     #投稿のデータを引っ張ってくる際に、関連付けされたモデルのデータも一緒に取得するために「includes(user)」を使う
-    @posts = Post.all.includes(:user).order(created_at: :desc)
+    @posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     #詳細画面に新しいもの順にコメントが表示される
     @comment = Comment.new
-    @comments = @post.comments.includes(:user).order(created_at: :desc).page(params[:page])
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
 
   def edit; end
