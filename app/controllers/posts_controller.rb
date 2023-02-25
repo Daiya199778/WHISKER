@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     #詳細画面に新しいもの順にコメントが表示される
     @comment = Comment.new
-    @comments = @post.comments.includes(:user).order(created_at: :desc)
+    @comments = @post.comments.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def edit; end
@@ -51,7 +51,7 @@ class PostsController < ApplicationController
   end
 
   def bookmarks
-    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
