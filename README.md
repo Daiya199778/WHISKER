@@ -73,4 +73,4 @@
   https://www.figma.com/file/U0KtiDnEs35y7wF3LDsLYD/runteq_%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0%3A1&t=B3SOa8aIDpSOyLHB-0
 
 # ■ ER図
-  [![Image from Gyazo](https://i.gyazo.com/f5a9296750743d6d46234c6acfb143fa.png)](https://gyazo.com/f5a9296750743d6d46234c6acfb143fa)
+  [![Image from Gyazo](https://i.gyazo.com/aa0e699498f11b2fa8898280bf8f2784.jpg)](https://gyazo.com/aa0e699498f11b2fa8898280bf8f2784)
