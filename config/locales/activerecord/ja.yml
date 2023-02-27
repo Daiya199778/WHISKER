@@ -16,6 +16,10 @@ ja:
         whiskey_brand: '銘柄'
         price: '価格'
         post_image: 'サムネイル'
+      post/countries:
+        name: '原産国'
+      post/whiskey_types:
+        name: '原材料'
       comment:
         body: 'コメント'
       whiskey_type:
