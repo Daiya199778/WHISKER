@@ -1,0 +1,20 @@
+ja:
+  enums:
+    post:
+      country:
+        scotland: 'スコットランド'
+        ireland: 'アイルランド'
+        america: 'アメリカ'
+        canada: 'カナダ'
+        japan: '日本'
+        taiwan: '台湾'
+        india: 'インド'
+        others: 'その他'
+      whikey_type:
+        malt: 'モルト'
+        grain: 'グレーン'
+        belended: 'ブレンデッド'
+        bourbon: 'バーボン'
+        rye: 'ライ'
+        corn: 'コーン'
+        others: 'その他'

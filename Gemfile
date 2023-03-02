@@ -62,6 +62,7 @@ gem 'jquery-rails'
 gem 'sorcery'
 gem 'pry-byebug'
 gem 'rails-i18n'
+gem 'enum_help'
 #画像を投稿するためのgem
 gem 'carrierwave'
 #画像のサイズ調整のためのgem
