@@ -1,12 +1,14 @@
-<nav class="navbar bg-light">
+<nav class="navbar">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag 'logo.png' %>
     <% end %>
     <div class="d-flex align-items-center">
-      <!--form class="w-100 me-3" role="search">
-        <input type="search" class="form-control" placeholder="検索...">
-      </form-->
+      <% if logged_in? %>
+        <form class="w-100 me-3" role="search">
+          <input type="search" class="form-control" placeholder="検索...">
+        </form-->
+      <% end %>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
         <span class="navbar-toggler-icon"></span>
       </button>
