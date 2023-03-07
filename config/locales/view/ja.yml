@@ -6,7 +6,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
-    comment: 'コメント' 
+    comment: 'コメント'
+    search_word: '検索ワード'
   users:
     new:
       title: '新規登録'
