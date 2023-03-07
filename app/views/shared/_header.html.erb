@@ -1,6 +1,8 @@
 <nav class="navbar">
   <div class="container-fluid">
-    <%= link_to "WHISKER", root_path, class: "navbar-brand" %>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag 'logo.png' %>
+    <% end %>
     <div class="d-flex align-items-center">
       <form class="w-100 me-3" role="search">
         <input type="search" class="form-control" placeholder="検索...">
