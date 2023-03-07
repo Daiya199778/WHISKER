@@ -67,3 +67,4 @@ gem 'carrierwave'
 #画像のサイズ調整のためのgem
 gem 'mini_magick'
 gem 'kaminari'
+gem 'ransack'
