@@ -1,20 +1,37 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <%= link_to root_path, class: 'navbar-brand' do %>
+<nav class="navbar">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag 'logo.png' %>
     <% end %>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto main-nav align-items-center">
-        <li class="nav-item">
-          <%= link_to '投稿一覧', posts_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to (t'defaults.login'), login_path ,class: 'nav-link' %>
-        </li>
-      </ul>
+    <div class="d-flex align-items-center">
+      <% if logged_in? %>
+        <form class="w-100 me-3" role="search">
+          <input type="search" class="form-control" placeholder="検索...">
+        </form-->
+      <% end %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">ゲストさん</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <%= link_to (t'posts.index.title'), posts_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to (t'defaults.login'), login_path, class: "nav-link" %>
+            </li>
+          </ul>
+          <!--form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="検索..." aria-label="検索...">
+            <button class="btn btn-outline-success flex-shrink-0" type="submit">検索</button>
+          </form-->
+        </div>
+      </div>
     </div>
-  </nav>
-</header>
+  </div>
+</nav>

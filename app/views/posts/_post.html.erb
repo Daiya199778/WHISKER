@@ -9,13 +9,14 @@
           <h4 class="card-title">
             <%= link_to post.title, post_path(post) %>
           </h4>
+          <br>
           <p class="card-text">
-            <%= icon 'far', 'user' %>
+            <i class="bi bi-person-video"></i>
             <!-- post.user.nameでユーザーネームを定義する-->
             <%= post.user.name %>
           </p>
           <p class="card-text">
-            <%= icon 'far', 'calendar' %>
+            <i class="bi bi-calendar2-week"></i>
             <%= l post.created_at, format: :long %>
           </p>
           <p class="card-text">
