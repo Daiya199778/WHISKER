@@ -1,19 +1,21 @@
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag 'logo.png' %>
     <% end %>
     <div class="d-flex align-items-center">
-      <form class="w-100 me-3" role="search">
-        <input type="search" class="form-control" placeholder="検索...">
-      </form>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+      <%= search_form_for @q, url: posts_path do |f| %>
+        <form class="w-100 me-3" role="search">
+          <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+        </form>
+      <% end %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">ようこそ<%= current_user.name%>さん</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel"><%= current_user.name%></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">

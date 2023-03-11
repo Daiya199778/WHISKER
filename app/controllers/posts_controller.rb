@@ -2,10 +2,14 @@ class PostsController < ApplicationController
   #skip_before_action :require_login, only: %i[index]
   #set_postの一文を定義している
   before_action :set_post, only: [:edit, :update, :destroy]
+  #application_controllerにset_searchを記述したから必要なし
+  #before_action :set_q, only: [:index, :new, :create, :edit, :update, :show]
 
   def index
     #投稿のデータを引っ張ってくる際に、関連付けされたモデルのデータも一緒に取得するために「includes(user)」を使う
-    @posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page])
+    #@posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page])
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -51,10 +55,16 @@ class PostsController < ApplicationController
   end
 
   def bookmarks
-    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc).page(params[:page])
+    #@bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc).page(params[:page])
+    @q = current_user.bookmark_posts.ransack(params[:q])
+    @bookmark_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
+
+  #def set_q
+    #@q = Post.ransack(params[:q])
+  #end
 
   def set_post
     #edit/update/destroyアクションで使う下記の一文をまとめて記載
