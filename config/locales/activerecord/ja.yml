@@ -10,6 +10,8 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
+        introduction: '自己紹介'
+        avatar: 'アバター'
       post:
         title: 'タイトル'
         body: '本文'
@@ -19,10 +21,10 @@ ja:
       post/countries:
         name: '原産国'
       post/whiskey_types:
-        name: '原材料'
+        name: '原酒'
       comment:
         body: 'コメント'
       whiskey_type:
-        name: '原材料'
+        name: '原酒'
       country:
         name: '原産国'

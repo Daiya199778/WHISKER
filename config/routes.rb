@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   end
   # ブックマークのcreateアクションとdestroyアクション
   resources :bookmarks, only: %i[create destroy]
+  resource :profile, only: %i[show edit update]
 end

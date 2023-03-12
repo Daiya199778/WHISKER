@@ -6,7 +6,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
-    comment: 'コメント' 
+    comment: 'コメント'
+    search_word: '検索ワード'
   users:
     new:
       title: '新規登録'
@@ -65,3 +66,15 @@ ja:
   studies:
     show:
       title: 'ウイスキー豆知識'
+  profiles:
+    show:
+      title: 'プロフィール'
+      information: '登録情報'
+      introduction: '自己紹介'
+      email: 'メールアドレス'
+      name: 'ニックネーム'
+      word: 'ひと言'
+    edit:
+      title: 'プロフィール編集'
+      success: 'プロフィールを変更しました'
+      fail: 'プロフィールを変更できません'

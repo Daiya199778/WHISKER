@@ -1,19 +1,19 @@
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag 'logo.png' %>
     <% end %>
     <div class="d-flex align-items-center">
-      <form class="w-100 me-3" role="search">
-        <input type="search" class="form-control" placeholder="検索...">
-      </form>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">ようこそ<%= current_user.name%>さん</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">
+            <%= image_tag current_user.avatar_url, size: '50x50', class: 'rounded-circle mr15'%>
+            <%= current_user.name%>
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -28,10 +28,11 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                プロフィール
+                マイページ
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to (t'mypages.show.title'), '#', class: 'dropdown-item' %></li>
+                <li><%= link_to (t'profiles.show.title'), profile_path, class: 'dropdown-item' %></li>
+                <li><%= link_to (t'profiles.edit.title'), edit_profile_path, class: 'dropdown-item' %></li>
                 <!--hr class="dropdown-divider"-->
               </ul>
             </li>
