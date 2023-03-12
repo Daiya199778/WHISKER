@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  mount_uploader :avatar, AvatarUploader
   #Userモデルに、postモデルとの関連付けを追加
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy

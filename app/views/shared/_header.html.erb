@@ -4,18 +4,13 @@
       <%= image_tag 'logo.png' %>
     <% end %>
     <div class="d-flex align-items-center">
-      <%= search_form_for @q, url: posts_path do |f| %>
-        <form class="w-100 me-3" role="search">
-          <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
-        </form>
-      <% end %>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">
-            <!--%= image_tag current_user.avatar_url, size: '40x40', class: 'rounded-circle mr15'%-->
+            <%= image_tag current_user.avatar_url, size: '50x50', class: 'rounded-circle mr15'%>
             <%= current_user.name%>
           </h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>

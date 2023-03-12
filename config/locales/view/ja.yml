@@ -67,8 +67,14 @@ ja:
     show:
       title: 'ウイスキー豆知識'
   profiles:
-        information: '登録情報'
-        introduce: '自己紹介'
-        email: 'メールアドレス'
-        name: 'ニックネーム'
-        word: 'ひと言'
+    show:
+      title: 'プロフィール'
+      information: '登録情報'
+      introduce: '自己紹介'
+      email: 'メールアドレス'
+      name: 'ニックネーム'
+      word: 'ひと言'
+    edit:
+      title: 'プロフィール編集'
+      success: 'プロフィールを変更しました'
+      fail: 'プロフィールを変更できません'
