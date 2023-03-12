@@ -14,7 +14,10 @@
       </button>
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel"><%= current_user.name%></h5>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">
+            <!--%= image_tag current_user.avatar_url, size: '40x40', class: 'rounded-circle mr15'%-->
+            <%= current_user.name%>
+          </h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
@@ -33,7 +36,7 @@
                 プロフィール
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to (t'mypages.show.title'), '#', class: 'dropdown-item' %></li>
+                <li><%= link_to (t'mypages.show.title'), profile_path, class: 'dropdown-item' %></li>
                 <!--hr class="dropdown-divider"-->
               </ul>
             </li>

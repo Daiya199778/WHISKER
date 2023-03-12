@@ -66,3 +66,9 @@ ja:
   studies:
     show:
       title: 'ウイスキー豆知識'
+  profiles:
+        information: '登録情報'
+        introduce: '自己紹介'
+        email: 'メールアドレス'
+        name: 'ニックネーム'
+        word: 'ひと言'
