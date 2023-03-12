@@ -70,7 +70,7 @@ ja:
     show:
       title: 'プロフィール'
       information: '登録情報'
-      introduce: '自己紹介'
+      introduction: '自己紹介'
       email: 'メールアドレス'
       name: 'ニックネーム'
       word: 'ひと言'
