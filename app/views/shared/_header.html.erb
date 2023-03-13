@@ -17,6 +17,18 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= (t'konwledges.show.title')%>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to (t'konwledges.show.history'), "#", class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.whiskey_types'), "#", class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.country'), "#", class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.how_to_drink'), "#", class: 'dropdown-item' %></li>
+                <!--hr class="dropdown-divider"-->
+              </ul>
+            </li>
             <li class="nav-item">
               <%= link_to (t'posts.index.title'), posts_path, class: "nav-link" %>
             </li>

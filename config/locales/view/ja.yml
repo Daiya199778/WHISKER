@@ -63,9 +63,13 @@ ja:
   mypages:
     show:
       title: 'マイページ'
-  studies:
+  konwledges:
     show:
       title: 'ウイスキー豆知識'
+      history: 'ウイスキーの歴史'
+      whiskey_types: 'ウイスキーの種類'
+      country: 'ウイスキーの原産国'
+      how_to_drink: 'ウイスキーの飲み方'
   profiles:
     show:
       title: 'プロフィール'
