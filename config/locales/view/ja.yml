@@ -67,10 +67,10 @@ ja:
     show:
       title: 'ウイスキー豆知識'
       show: 'ウイスキーとは'
-      history: 'ウイスキーの歴史'
-      whiskeys: 'ウイスキーの種類'
-      countries: 'ウイスキーの原産国'
-      how_to_drink: 'ウイスキーの飲み方'
+      history: '歴史について'
+      whiskey: '原酒について'
+      countries: '原産国について'
+      how_to_drink: '飲み方について'
   profiles:
     show:
       title: 'プロフィール'

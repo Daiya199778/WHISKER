@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resource :konwledge, only: %i[show] do
     collection do
       get 'history'
-      get 'whiskeys'
-      get 'countries'
+      get 'whiskey'
+      get 'country'
       get 'how_to_drink'
     end
   end
