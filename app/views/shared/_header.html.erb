@@ -22,10 +22,11 @@
                 <%= (t'konwledges.show.title')%>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to (t'konwledges.show.history'), "#", class: 'dropdown-item' %></li>
-                <li><%= link_to (t'konwledges.show.whiskey_types'), "#", class: 'dropdown-item' %></li>
-                <li><%= link_to (t'konwledges.show.country'), "#", class: 'dropdown-item' %></li>
-                <li><%= link_to (t'konwledges.show.how_to_drink'), "#", class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.show'), konwledge_path, class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.history'), history_konwledge_path, class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.whiskeys'), whiskeys_konwledge_path, class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.countries'), countries_konwledge_path, class: 'dropdown-item' %></li>
+                <li><%= link_to (t'konwledges.show.how_to_drink'), how_to_drink_konwledge_path, class: 'dropdown-item' %></li>
                 <!--hr class="dropdown-divider"-->
               </ul>
             </li>
