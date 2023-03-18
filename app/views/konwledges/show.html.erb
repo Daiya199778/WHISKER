@@ -1,2 +1,80 @@
-<div class="container-fluid whiskey-show"></div>
-
+<div class="container-fluid whiskey-show">
+  <br>
+  <br>
+  <h1 class="my-6 text-center text-white"> ウイスキーとは</h1>
+  <br>
+  
+  <!-- Project One -->
+  <div class="row">
+    <div class="col-md-5">
+      <a><%= image_tag 'whiskey_show.png', size: '700x400', class: 'img-fluid rounded mb-2 mb-md-0' %></a>
+    </div>
+    <div class="col-md-7">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ウイスキーとは
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                <%= image_tag 'product.png', size: '530x120' %>
+                <br>
+                <br>
+                ■ウイスキーの定義には、主に「原料」「製法」「熟成方法」などで定めがある。
+                <li>原料に大麦やライ麦、トウモロコシといった「穀類」を使っていること</li>
+                <li>糖化、発酵、蒸溜を行って造った「蒸溜酒」であること</li>
+                <li>木製の樽に貯蔵して、熟成させていること</li>
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              美味しいウイスキーの5大要素
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                1.水(仕込み水)：水はウイスキーの味に影響し、硬水/軟水でもウイスキーの個性が変わる。
+                <br>
+                2.原料：原料の種類や質、収穫地などでウイスキーの風味、色合いが大きく変わる。
+                <br>
+                3.ピート(泥炭)：「炭化の進んでいない石炭」のことで、ウイスキーの香り付けに必須。
+                <br>
+                4.蒸留機：
+                <li>
+                  蒸留機には「単式蒸留器（ポットスチル）」と「連続蒸留器」がある。
+                </li>
+                <li>
+                  単式蒸留器 = 一度ずつしか蒸留できないが、風味豊かな個性的ウイスキーに仕上がる。
+                </li>
+                <li>
+                  連続蒸留器 = 連続的に蒸留ができ、口当たりの良い軽快なウイスキーに仕上がる。
+                </li>
+                5.熟成樽(カスク)：<br>
+                ウイスキーは熟成樽にて長期熟成させることで完成に近づく。<br>
+                熟成中にウイスキーが琥珀色に色づくとともに、樽由来の風味が付与されるため、<br>
+                熟成樽選びはウイスキー造りのなかでもとくに重要な要素と言える。
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
+      <p class>
+        <div class="btn-group me-2" role="group" aria-label="第一グループ">
+          <button type="button" class="btn btn-secondary">最後へ</button>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="第二グループ">
+          <button type="button" class="btn btn-primary">次へ</button>
+        </div>
+      </p>
+    </div>
+  </div>
+</div>

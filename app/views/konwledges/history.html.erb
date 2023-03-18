@@ -1,1 +1,71 @@
-<div class="container-fluid history"></div>
+<div class="container-fluid history">
+  <br>
+  <br>
+  <h1 class="my-6 text-center text-white"> ウイスキーの歴史について</h1>
+  <br>
+
+  <!-- Project One -->
+  <div class="row">
+    <div class="col-md-5">
+      <a><%= image_tag 'whiskey_history.png', size: '600x600', class: 'img-fluid rounded mb-2 mb-md-0' %></a>
+    </div>
+    <div class="col-md-7">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ウイスキーの発祥
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                1494年にスコットランドにて王室の出納記録にウイスキーが初めて記載される。<br>
+                アイルランドが発祥という諸説もあるが、明確な記録がないため現在はスコットランドが発祥とされている。
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              ジャパニーズ・ウイスキーの誕生
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+              1800年代中期以降、海外からウイスキーの輸入が始まり、1900年代に入り日本初のウイスキー蒸留所(山崎蒸留所)が作られる。
+              また、この頃から日本で製造されるウイスキーは「スコッチウイスキー」を元に作られていたとされている。
+              その後、竹鶴政孝が日本における本格的スコッチウイスキーを目指し、<br>
+              「余市蒸留所」設立したことが「ジャパニーズ・ウイスキー」の始まりとされている。
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              今後のウイスキー市場
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>これは3番目のアイテムのアコーディオン本体。</strong>...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
+      <p class>
+        <div class="btn-group me-2" role="group" aria-label="第一グループ">
+          <button type="button" class="btn btn-secondary">最後へ</button>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="第二グループ">
+          <button type="button" class="btn btn-primary">次へ</button>
+        </div>
+      </p>
+    </div>
+  </div>
+</div>
