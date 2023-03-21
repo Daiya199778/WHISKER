@@ -1,6 +1,7 @@
 <% content_for(:title, t('.title')) %>
 <div class="container">
   <!-- Portfolio Item Heading -->
+  <br>
   <h1 class="my-4"><%= t('.title') %></h1>
   <!-- Portfolio Item Row -->
   <div class="row">
@@ -31,6 +32,7 @@
       </div>
     </div>
  </div>
+ <br>
   <h3 class="my-4">コメント</h3> 
   <!-- コメントフォーム -->
   <%= render 'comments/form', { post: @post, comment: @comment } %>
