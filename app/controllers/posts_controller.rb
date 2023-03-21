@@ -26,7 +26,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path, success: t('posts.create.success')
     else
-      flash.now['danger'] = t('posts.create.fail')
+      #binding.pry
+      flash.now[:danger] = t('posts.create.fail')
       render :new
     end
   end
@@ -61,10 +62,6 @@ class PostsController < ApplicationController
   end
 
   private
-
-  #def set_q
-    #@q = Post.ransack(params[:q])
-  #end
 
   def set_post
     #edit/update/destroyアクションで使う下記の一文をまとめて記載

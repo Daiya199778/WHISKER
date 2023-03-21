@@ -1,0 +1,115 @@
+<div class="container-fluid how-to-drink">
+  <br>
+  <br>
+  <h1 class="my-6 text-center text-white"> ウイスキーの飲み方について</h1>
+  <br>
+
+  <!-- Project One -->
+  <div class="row">
+    <div class="col-md-9 mx-auto">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <%= image_tag 'straight.png', size: '50x50' %>　ストレート
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                ◆ウイスキーに何も加えずそのまま飲む方法<br>
+                　・ウイスキーのおいしさをじっくりを感じることができ、立ち上る香りを愉しみながら飲むのが真骨頂
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <%= image_tag 'rock.png', size: '50x50' %>　ロック
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                ◆氷と共に飲む方法<br>
+                　・最初はストレートに近く、氷が溶けていくごとに段々と水割りに近くなっていくので、味の変化を楽しむことができる
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <%= image_tag 'straight.png', size: '50x50' %>　トワイスアップ
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                ◆ウイスキーと同じ量の水を加えて飲む方法<br>
+                　・グラスにウイスキーと常温の水を1:1で入れれば出来上がる<br>
+                　・加水によってまろやかな味を楽しむことができる
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <%= image_tag 'hi_ball.png', size: '50x50' %>　ハイボール
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                ◆ウイスキー適量とソーダ水を混ぜ合わせて飲む方法<br>
+                　・軽い飲み口でグビグビ飲めるので、多くの方が好む飲み方である<br>
+                　・レモンを搾ったり、レモンカットやスライスをそのまま入れるなどすると変わった味わいに変化する
+              </strong>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <%= image_tag 'hot_whiskey.png', size: '50x50' %>　ホットウイスキー
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>
+                  ◆ウイスキーにお湯を割って飲む方法<br>
+                  　・グラスの1/3～1/4ほどのウイスキーを注ぎ、その後ウイスキーの2倍～3倍ほどのお湯を加えれば完成
+                </strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                その他の飲み方
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>
+                  ◆水割り／ハーフロック／ウイスキーフロート／ミスト　ect...
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
+      <p class>
+        <div class="btn-group me-2" role="group" aria-label="第一グループ">
+          <%= link_to '戻る', country_konwledge_path, class: 'btn btn-secondary btn-lg text-white' %>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="第二グループ">
+          <%= link_to '最初へ', konwledge_path, class: 'btn btn-primary btn-lg text-white' %>
+        </div>
+      </p>
+    </div>
+  </div>
+</div>

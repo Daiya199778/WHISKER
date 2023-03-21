@@ -1,0 +1,64 @@
+<div class="container-fluid history">
+  <br>
+  <br>
+  <h1 class="my-6 text-center text-white"> ウイスキーの歴史について</h1>
+  <br>
+
+  <!-- Project One -->
+  <div class="row">
+    <div class="col-md-9 mx-auto">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ウイスキーの誕生
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+                <%= image_tag 'history_of_whiskey.png', size: '500x200' %><br>
+                1494年のスコットランドの王室出納記録にてウイスキーに関する内容が発見されたことから。
+                ウイスキーというお酒の発祥は「スコットランド」であるとされている。
+                始めは薬として造られたウイスキー。当時は現在のウイスキーとは異なり無色透明のお酒であった。
+                1700年代に入り、スコットランドがイギリスに併合されたことをきっかけに、
+                重い課税に苦しんだスコットランド人が、密かにウイスキーを造り始める。
+                その際に、たまたまシェリー酒の空き樽に造りたてのウイスキーを入れて保存させていたところ、無色透明だったウイスキーが鮮やかな琥珀色に変化しており、
+                味はまろやかで香りも豊かになっていたため、たちまち町中で広まり、今のウイスキーの原型となっている。<br>
+                その後、アメリカ、カナダ、アイルランド、日本へと広がり、世界5大ウイスキー国として世に知られるようになった。
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              ジャパニーズ・ウイスキーの誕生
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>
+              1800年代中期以降、海外からウイスキーの輸入が始まり、<br>
+              1900年代に入り日本初のウイスキー蒸留所(山崎蒸留所)が作られる。<br>
+              また、この頃から日本で製造されるウイスキーは「スコッチウイスキー」を元に作られていたとされている。<br>
+              その後、竹鶴政孝が日本における本格的スコッチウイスキーを目指し、<br>
+              余市蒸留所を設立したことが「ジャパニーズ・ウイスキー」の始まりとされている。
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
+      <p class>
+        <div class="btn-group me-2" role="group" aria-label="第一グループ">
+          <%= link_to '戻る', konwledge_path, class: 'btn btn-secondary btn-lg text-white' %>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="第二グループ">
+          <%= link_to '次へ', whiskey_konwledge_path, class: 'btn btn-primary btn-lg text-white' %>
+        </div>
+      </p>
+    </div>
+  </div>
+</div>

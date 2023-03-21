@@ -1,8 +1,77 @@
-.top-img {
-  background-image: image-url("top.jpeg");
-  height: calc(100vh - 134px);
-  position: relative;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+/* 全体的なスタイル
+-------------------------------------------------- */
+/* フッターの下の空白と明るめの本文 */
+
+body {
+  color: #5a5a5a;
+}
+
+
+/* カルーセルをカスタマイズ
+-------------------------------------------------- */
+
+/* カルーセルの基本クラス */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* 画像を配置しているので、キャプションを手助けする必要がある */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* img要素の配置のために高さを宣言 */
+.carousel-item {
+  height: 32rem;
+}
+
+
+/* マーケティング・コンテンツ
+-------------------------------------------------- */
+
+/* カルーセルの下の3列の中のテキストを整列 */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* フィーチャー
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* ブートストラップの&lt;hr&gt;をもっと外に出す */
+}
+
+/* マーケティングの見出しを細めにする */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+
+/* レスポンシブCSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* カルーセルコンテンツのサイズを大きくする */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
 }

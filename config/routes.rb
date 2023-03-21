@@ -2,6 +2,16 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'static_pages#top'
 
+  #ウイスキー豆知識のルーティング
+  resource :konwledge, only: %i[show] do
+    collection do
+      get 'history'
+      get 'whiskey'
+      get 'country'
+      get 'how_to_drink'
+    end
+  end
+
   #ログイン機能のルーティング
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'

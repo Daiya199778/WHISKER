@@ -1,0 +1,15 @@
+.how-to-drink {
+  background-image: image-url("background.png");
+  height: calc(100vh - 134px);
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btnbar{
+  text-align-last: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
