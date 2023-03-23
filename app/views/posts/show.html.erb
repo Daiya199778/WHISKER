@@ -12,8 +12,10 @@
       <div class="col-lg-6">
         <div class="card mb-3 mb-lg-0">
           <div class="card-body">
-            <h3 class="my-3"><%= @post.title %></h3>
-            <h5 class="my-3"><%= @post.body %></h5>
+            <h5 class="my-0 bi bi-chat-left-text-fill"></h5>
+            <%= @post.title %>
+            <h5 class="my-0 bi bi-tags-fill"></h5>
+            <%= @post.body %>
             <hr>
             <h3 class="my-3"><%= t('.category')%></h3>
 
@@ -27,8 +29,11 @@
               <p class="bi bi-globe-asia-australia"> <%= country.name %></p>
             <% end %> 
 
-            <p class="bi bi-cash-coin"><%= @post.price %></p>
-            <%= render 'crud_menus', post: @post if current_user.own?(@post) %>
+            <p class="bi bi-currency-yen">
+              <%= @post.price %>
+              　　　　　　　　　　　　　　　　　　　　　　　
+              <%= render 'crud_menus', post: @post if current_user.own?(@post) %>
+            </p>
           </div>
         </div>
       </div>

@@ -35,8 +35,10 @@
             <i class="bi bi-currency-yen"></i>
             <%= post.price %>
             <% if current_user.own?(post) %>
+              　　　　　　　　　　　　
               <%= render 'crud_menus', post: post %>
             <% else %>
+              　　　　　　　　　　　　　　
               <%= render 'bookmark_button', post: post  %>
             <% end %>
           </p>
