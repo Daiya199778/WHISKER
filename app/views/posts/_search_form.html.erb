@@ -7,7 +7,7 @@
       <div class="row g-3">
         <div class="col-4 ">
           <label for="Title" class="form-label">
-            <i class="fas fa-plus icon"></i>
+            <i class="bi bi-chat-left-text-fill"></i>
             <span>タイトルで検索する</span>
           </label>
           <%= f.search_field :title_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
@@ -21,7 +21,7 @@
         </div>
         <div class="col-4">
           <label for="User_Name" class="form-label">
-            <i class="fas fa-tag icon"></i>
+            <i class="bi bi-person-circle"></i>
             <span>ユーザーで検索する</span>
           </label>
           <%= f.search_field :user_name_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
