@@ -15,4 +15,18 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
+
+$(function () {
+  $(document).on("click", ".js-edit-comment-button", function () {
+    const commentId = $(this).data('cancel-id');
+    const commentLabelArea = $('#js-comment-label-' + commentId);
+    const commentTextArea = $('#js-textarea-comment-' + commentId);
+    const commentButton = $('#js-comment-button-' + commentId);
+    const commentError = $('#js-comment-post-error-' + commentId);
+
+    commentLabelArea.show();
+    commentTextArea.hide();
+    commentButton.hide();
+    commentError.hide();
+  });
+});
