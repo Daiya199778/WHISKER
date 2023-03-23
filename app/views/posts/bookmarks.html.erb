@@ -1,21 +1,23 @@
 <% content_for(:title, t('.title')) %>
 <!-- 掲示板一覧 -->
-<div class="container pt-3">
-  <div class="row">
-      <div class="col-12">
-        <%= render 'search_form', url: bookmarks_posts_path %>
-        <div class="row">
-          <% if @bookmark_posts.present? %>
-            <%= render @bookmark_posts %>
-          <% else %>
-            <div class="row justify-content-center">
-              <p class="col-auto"><%= t('.no_result') %></p>
-            </div>
-          <% end %>
+<main class="flex-grow p-0">
+  <div class="container pt-4">
+    <div class="row">
+        <div class="col-12">
+          <%= render 'search_form', url: bookmarks_posts_path %>
+          <div class="row">
+            <% if @bookmark_posts.present? %>
+              <%= render @bookmark_posts %>
+            <% else %>
+              <div class="row justify-content-center">
+                <p class="col-auto"><%= t('.no_result') %></p>
+              </div>
+            <% end %>
+          </div>
+          <!-- ページネーション -->
+          <%= paginate @bookmark_posts %>
         </div>
-        <!-- ページネーション -->
-        <%= paginate @bookmark_posts %>
       </div>
     </div>
   </div>
-</div>
+</main>

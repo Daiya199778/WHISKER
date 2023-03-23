@@ -1,3 +1,4 @@
+<div>
   <%= search_form_for @q, url: url do |f| %>
     <div class="text-center">
       <h3 class>検索一覧</h3>
@@ -14,7 +15,7 @@
         </div>
         <div class="col-4">
           <label for="Body" class="form-label">
-            <i class="fas fa-tag icon"></i>
+            <i class="bi bi-tags-fill"></i>
             <span>内容で検索する</span>
           </label>
           <%= f.search_field :body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
@@ -58,4 +59,6 @@
       </div>
     </div>
   <% end %>
+</div>
 <br>
+
