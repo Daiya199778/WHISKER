@@ -12,9 +12,10 @@
           <%= image_tag 'first.png', width: "100%", height: "100%" %>
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>見出しの例。</h1>
-              <p>カルーセルの1番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">本日登録</a></p>
+              <h1>自分だけの<br>
+                Whiskey Lifeを見つけよう
+              </h1>
+              <p>自分が飲んだウイスキーを記録として残していこう！</p>
             </div>
           </div>
         </div>
@@ -22,9 +23,8 @@
           <%= image_tag 'second.png', width: "100%", height: "100%" %>
           <div class="container">
             <div class="carousel-caption">
-              <h1>別の見出しの例。</h1>
-              <p>カルーセルの2番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">もっと学ぼう</a></p>
+              <h1>ウイスキーの知識を学ぶとより美味しい</h1>
+              <p>アプリ上で知識を学びながらウイスキーを楽しもう！</p>
             </div>
           </div>
         </div>
@@ -32,9 +32,11 @@
           <%= image_tag 'third.png', width: "100%", height: "100%" %>
           <div class="container">
             <div class="carousel-caption text-end">
-              <h1>もう1つ良い指標。</h1>
-              <p>カルーセルの3番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">ギャラリーを閲覧</a></p>
+              <h1>
+                ウイスキー好きたちで<br>
+                最高のウイスキーを共有し合おう
+              </h1>
+              <p>アプリ上のコメント機能やお気に入り機能を活用して情報を集めよう！</p>
             </div>
           </div>
         </div>
@@ -56,35 +58,63 @@
       <!-- カルーセルの下にある3列のテキスト -->
       <div class="row">
         <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#777" width="100%" height="100%"/></svg>
-          <h2 class="fw-normal">見出し</h2>
-          <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
+          <!--%= image_tag 'first.png', width: "150", height: "150", class: 'rounded-circle'%-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-person-vcard" viewBox="0 0 16 16">
+            <path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z"/>
+            <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z"/>
+          </svg>
+          <h2 class="fw-normal">ユーザー登録</h2>
+          <p>
+            ユーザー登録をすると、<br>
+            ウイスキーの全機能が利用できるようになります。<br>
+            ユーザー登録をして自分のウイスキーを投稿しよう！
+          </p>
+          <%= link_to 'ユーザー登録をする', new_user_path, class: 'btn btn-secondary btn-lg text-white' %>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#777" width="100%" height="100%"/></svg>
-          <h2 class="fw-normal">見出し</h2>
-          <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
+          <!--%= image_tag 'first.png', width: "150", height: "150", class: 'rounded-circle'%-->   
+          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+          </svg>       
+          <h2 class="fw-normal">投稿＆お気に入り</h2>
+          <p>
+            ウイスキーを投稿してみんなでシェアしよう！<br>
+            投稿の中から自分が気になる<br>
+            ウイスキーがあればをチェックしよう！
+          </p>
+          <%= link_to '投稿を見る', posts_path, class: 'btn btn-secondary btn-lg text-white' %>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#777" width="100%" height="100%"/></svg>
-          <h2 class="fw-normal">見出し</h2>
-          <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
+          <!--%= image_tag 'first.png', width: "150", height: "150", class: 'rounded-circle'%-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+          </svg>
+          <h2 class="fw-normal">豆知識</h2>
+          <p>
+            ウイスキー初心者でも分かりやすい豆知識機能<br>
+            初心者の方は、豆知識機能を活用しながら<br>
+            ウイスキーの知見をどんどん高めていこう！
+          </p>
+          <%= link_to '豆知識を見る', konwledge_path, class: 'btn btn-secondary btn-lg text-white' %>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
       <!-- フィーチャーを開始 -->
       <hr class="featurette-divider">
-
+      <h1 class="text-center">How To Use</h1>
+      <hr class="featurette-divider">
+      
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">最初のフィーチャータイトル。<span class="text-muted">それはあなたの心を吹き飛ばすだろう。</span></h2>
-          <p class="lead">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <h2 class="featurette-heading fw-normal text-center">ウイスキー投稿</h2>
+          <p class="lead text-center">
+            新規投稿画面から必要事項を入力して投稿しよう！
+          </p>
         </div>
         <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg>
+          <%= image_tag 'how_to_use_1.png', width: "1000", height: "600", class: 'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto'%>
+          <%# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="1000" height="600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg> %>
         </div>
       </div>
 
@@ -92,11 +122,14 @@
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">ああ、それは良いことだ。<span class="text-muted">自分で見て。</span></h2>
-          <p class="lead">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <h2 class="featurette-heading fw-normal text-center">コメント機能</h2>
+          <p class="lead text-center">
+            みんなのウイスキーにコメントを書き込もう！
+          </p>
         </div>
         <div class="col-md-5 order-md-1">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg>
+          <%= image_tag 'how_to_use_2.png', width: "1000", height: "600", class: 'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto'%>
+          <%# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="1000" height="600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg> %>
         </div>
       </div>
 
@@ -104,11 +137,14 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">そして、最後に、これ。<span class="text-muted">チェックメイト。</span></h2>
-          <p class="lead">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <h2 class="featurette-heading fw-normal text-center">豆知識機能</h2>
+          <p class="lead text-center">
+            ウイスキーの知識を増やしてもっとウイスキーのことを知ろう！
+          </p>
         </div>
         <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg>
+          <%= image_tag 'how_to_use_3.png', width: "1000", height: "600", class: 'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto'%>
+          <%# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="1000" height="600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg> %>
         </div>
       </div>
 

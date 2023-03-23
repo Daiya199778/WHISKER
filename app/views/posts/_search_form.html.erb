@@ -1,47 +1,47 @@
-<div class="container">
   <%= search_form_for @q, url: url do |f| %>
     <div class="text-center">
       <h3 class>検索一覧</h3>
     </div>
+    <br>
     <div class="text-center">
       <div class="row g-3">
-        <div class="col-6 ">
+        <div class="col-4 ">
           <label for="Title" class="form-label">
             <i class="fas fa-plus icon"></i>
             <span>タイトルで検索する</span>
           </label>
           <%= f.search_field :title_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
         </div>
-        <div class="col-6">
+        <div class="col-4">
           <label for="Body" class="form-label">
             <i class="fas fa-tag icon"></i>
             <span>内容で検索する</span>
           </label>
           <%= f.search_field :body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
         </div>
-        <div class="col-6">
+        <div class="col-4">
           <label for="User_Name" class="form-label">
             <i class="fas fa-tag icon"></i>
             <span>ユーザーで検索する</span>
           </label>
           <%= f.search_field :user_name_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
         </div>
-        <div class="col-6">
+        <%# <div class="col-6">
           <label for="Country" class="form-label">
             <i class="fas fa-tag icon"></i>
             <span>原産国で検索する</span>
           </label>
           <%= f.search_field :country_eq, class: 'form-control', placeholder: t('defaults.search_word') %>
           <!--%= f.select :post_countries_eq, Post.countries.all, :post_countries, :post_countries, { include_blank: '開催場所' }, { class: 'form-control' }, placeholder: t('defaults.search_word') %-->   
-        </div>
-        <div class="col-6">
+        <%# </div>  %>
+        <%# <div class="col-6">
           <label for="Whiskey_type" class="form-label">
             <i class="fas fa-tag icon"></i>
             <span>原酒で検索する</span>
           </label>
           <%= f.search_field :whiskey_type_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
-        </div>
-        <br>
+        <%# </div>  %>
+        <%# <br>
         <div class="col-6">
           <label for="Price" class="form-label">
             <i class="fas fa-coins icon"></i>
@@ -49,14 +49,13 @@
           </label>
           <br>
           <%= f.number_field :price_gteq, placeholder: "¥ Min" %>
-          <span>~</span>
+          <%# <span>~</span>
           <%= f.number_field :price_lteq, placeholder: "¥ Max" %>
           <%= f.submit "検索", class: "btn btn-primary" %>
-          <%= f.button "クリア", class: "btn btn-primary" %>
-        </div>
+          <%# <%= f.button "クリア", class: "btn btn-primary" %> 
+        <%# </div>  %>
         <hr class="my-4">
       </div>
     </div>
   <% end %>
-</div>
 <br>
