@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  #skip_before_action :require_login, only: %i[index]
+  skip_before_action :require_login, only: %i[index]
   #set_postの一文を定義している
   before_action :set_post, only: [:edit, :update, :destroy]
   #application_controllerにset_searchを記述したから必要なし
