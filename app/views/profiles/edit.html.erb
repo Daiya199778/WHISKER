@@ -6,8 +6,8 @@
     <hr>
     <br>
     <%= form_with model: @user, url: profile_path, local: true do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
       <div class="row">
-        <%= render 'shared/error_messages', object: f.object %>
         <div class="col-md-4">
           <div class="text-center">
             <%= image_tag @user.avatar.url, class: 'avatar img-circle img-thumbnail', alt: 'avatar', id: 'preview' %>
