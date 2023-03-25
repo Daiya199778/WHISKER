@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :guest_check
   def create
     @comment = current_user.comments.build(comment_params)
     @comment.save

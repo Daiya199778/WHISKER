@@ -1,4 +1,4 @@
-class BookmarksController < ApplicationController
+class BookmarksController < ApplicationController  
   def create
     @post = Post.find(params[:post_id])
     current_user.bookmark(@post)

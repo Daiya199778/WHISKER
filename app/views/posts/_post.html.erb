@@ -26,7 +26,7 @@
           </p>
           <p class="card-text">
             <% post.countries.each do |country| %>
-                <%# binding.pry %> 
+                <%# binding.pry %>
                 <i class="bi bi-globe-asia-australia"></i>
                 <%= country.name %>
             <% end %> 
@@ -34,13 +34,6 @@
           <p class="card-text">
             <i class="bi bi-currency-yen"></i>
             <%= post.price %>
-            <% if current_user.own?(post) %>
-              　　　　　　　　　　　　
-              <%= render 'crud_menus', post: post %>
-            <% else %>
-              　　　　　　　　　　　　　　
-              <%= render 'bookmark_button', post: post  %>
-            <% end %>
           </p>
         </div>
       </div>
