@@ -191,6 +191,7 @@ GEM
     parallel (1.22.1)
     parser (3.2.1.0)
       ast (~> 2.4.1)
+    pg (1.4.6)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -371,6 +372,7 @@ DEPENDENCIES
   kaminari
   listen (~> 3.3)
   mini_magick
+  pg
   pry-byebug
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
@@ -383,7 +385,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   sorcery
   spring
-  sqlite3 (~> 1.4)
+  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
