@@ -3,7 +3,9 @@ ja:
     message:
       require_login: 'ログインしてください'
       delete_confirm: '削除してもよろしいですか？'
+    guest_login: 'ゲストログイン'
     login: 'ログイン'
+    user_register: 'ユーザー登録'
     register: '登録'
     logout: 'ログアウト'
     comment: 'コメント'

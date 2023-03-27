@@ -1,8 +1,10 @@
-<div class='mr10 float-right'>
+<%# <li class="list-inline-item"> %>
   <%= link_to edit_post_path(post), id: "button-edit-#{post.id}" do %>
-    <%= icon 'fa', 'pen', class: 'pr-1' %>
+    <%= icon 'fas fa-edit text-primary', class: 'pr-1' %>
   <% end %>
+<%# </li> %>
+<%# <li class="list-inline-item"> %>
   <%= link_to post_path(post), id: "button-delete-#{post.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') } do %>
-    <%= icon 'fas', 'trash', class: 'pr-1' %>
+    <%= icon 'fa', 'trash', class: 'pr-1' %>
   <% end %>
-</div>
+<%# </li> %>

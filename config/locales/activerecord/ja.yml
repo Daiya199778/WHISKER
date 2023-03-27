@@ -14,7 +14,7 @@ ja:
         avatar: 'アバター'
       post:
         title: 'タイトル'
-        body: '本文'
+        body: '内容'
         whiskey_brand: '銘柄'
         price: '価格'
         post_image: 'サムネイル'

@@ -1,37 +1,39 @@
 <% content_for(:title, t('.title')) %>
-<div class="container py-5">
-  <br>
-  <h1 class><%= t('profiles.edit.title')%></h1>
-  <hr>
-  <br>
-  <%= form_with model: @user, url: profile_path, local: true do |f| %>
-    <div class="row">
+<main class="flex-grow p-0">
+  <div class="container py-5">
+    <br>
+    <h1 class><%= t('profiles.edit.title')%></h1>
+    <hr>
+    <br>
+    <%= form_with model: @user, url: profile_path, local: true do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
-      <div class="col-md-4">
-        <div class="text-center">
-          <%= image_tag @user.avatar.url, class: 'avatar img-circle img-thumbnail', alt: 'avatar', id: 'preview' %>
-          <%= f.file_field :avatar, onchange: 'previewFileWithId(preview)', class: 'form-control mb-5', accept: 'image/*' %>
-          <%= f.hidden_field :avatar_cache %>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="text-center">
+            <%= image_tag @user.avatar.url, class: 'avatar img-circle img-thumbnail', alt: 'avatar', id: 'preview' %>
+            <%= f.file_field :avatar, onchange: 'previewFileWithId(preview)', class: 'form-control mb-5', accept: 'image/*' %>
+            <%= f.hidden_field :avatar_cache %>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="form-group col-lg-10">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control mb-4' %>
+          </div>
+          <div class="form-group col-lg-10">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control mb-4' %>
+          </div>
+          <div class="form-group col-lg-10">
+            <%= f.label :introduction %>
+            <%= f.text_area :introduction, class: 'form-control mb-4', rows: '7' %>
+          </div>
+          <%= f.submit class: 'btn btn-primary' %>
         </div>
       </div>
-      <div class="col-md-7">
-        <div class="form-group col-lg-10">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: 'form-control mb-4' %>
-        </div>
-        <div class="form-group col-lg-10">
-          <%= f.label :name %>
-          <%= f.text_field :name, class: 'form-control mb-4' %>
-        </div>
-        <div class="form-group col-lg-10">
-          <%= f.label :introduction %>
-          <%= f.text_area :introduction, class: 'form-control mb-4', rows: '7' %>
-        </div>
-        <%= f.submit class: 'btn btn-primary' %>
-      </div>
-    </div>
-  <% end %>
-</div>
-<br>
-<br>
-<br>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+</main>
