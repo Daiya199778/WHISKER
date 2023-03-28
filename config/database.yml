@@ -21,9 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
+  <<: *default
   adapter: postgresql
   encoding: unicode
-  pool:  <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: whisker_production
-  username: <任意のユーザー名>
-  password: <%= ENV['DB_PASSWORD'] %> # .envで設定
+  pool: 5
