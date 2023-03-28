@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   get 'guest_login', to: 'user_sessions#guest_login'
 
   #ユーザーの新規登録機能
-  resources :users, only: %i[new create]
+  #resources :users, only: %i[new create]にすると、エラー時にusersというURLへ遷移するためrouting errorになる！
+  get 'users', to: 'users#new'
+  post 'users', to: 'users#create'
 
   resources :posts do
     resources :comments, only: %i[create update destroy], shallow: true
