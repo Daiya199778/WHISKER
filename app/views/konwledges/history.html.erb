@@ -1,9 +1,7 @@
 <div class="container-fluid history">
-  <br>
-  <br>
-  <h1 class="my-6 text-center text-white"> ウイスキーの歴史について</h1>
-  <br>
-
+  <div class="container py-4">
+    <h1 class="my-6 text-center text-white"> ウイスキーの歴史について</h1>
+  </div>
   <!-- Project One -->
   <div class="row">
     <div class="col-md-9 mx-auto">
@@ -11,13 +9,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              ウイスキーの誕生
+              <%= image_tag 'history.png', size: '30x30' %>　ウイスキーの誕生
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <strong>
-                <%= image_tag 'history_of_whiskey.png', size: '500x200' %><br>
                 1494年のスコットランドの王室出納記録にてウイスキーに関する内容が発見されたことから。
                 ウイスキーというお酒の発祥は「スコットランド」であるとされている。
                 始めは薬として造られたウイスキー。当時は現在のウイスキーとは異なり無色透明のお酒であった。
@@ -33,7 +30,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              ジャパニーズ・ウイスキーの誕生
+              <%= image_tag 'japanese_whiskey.png', size: '30x30' %>　ジャパニーズ・ウイスキーの誕生
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -50,15 +47,15 @@
         </div>
       </div>
     </div>
-    <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
-      <p class>
-        <div class="btn-group me-2" role="group" aria-label="第一グループ">
-          <%= link_to '前へ', konwledge_path, class: 'btn btn-secondary btn-lg text-white' %>
-        </div>
-        <div class="btn-group me-2" role="group" aria-label="第二グループ">
-          <%= link_to '次へ', whiskey_konwledge_path, class: 'btn btn-primary btn-lg text-white' %>
-        </div>
-      </p>
-    </div>
+  </div>
+  <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
+    <p class>
+      <div class="btn-group me-2" role="group" aria-label="第一グループ">
+        <%= link_to '前へ', konwledge_path, class: 'btn btn-secondary btn-lg text-white' %>
+      </div>
+      <div class="btn-group me-2" role="group" aria-label="第二グループ">
+        <%= link_to '次へ', whiskey_konwledge_path, class: 'btn btn-primary btn-lg text-white' %>
+      </div>
+    </p>
   </div>
 </div>
