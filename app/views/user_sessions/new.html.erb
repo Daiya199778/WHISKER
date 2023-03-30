@@ -16,26 +16,19 @@
                 <%= f.label :password, User.human_attribute_name(:password) %>
               </div>
               <br>
-              <div class='text-center'>
-                <%= f.submit (t'defaults.login'), class: 'btn btn-primary btn-lg' %>
+              <div class='d-grid mb-2'>
+                <%= f.submit (t'defaults.login'), class: 'btn btn-secondary btn-lg fw-bold' %>
               </div>
               <br>
-              <br>
-              <div class='text-center'>
+              <div class='d-grid mb-3 text-center'>
                 <%= link_to (t'.to_register_page'), users_path %>
+              </div>
+              <div class='d-grid mb-3 text-center'>
                 <a href="#"><%= t'.password_forget' %></a>
               </div>
               <hr class="my-4">
-              <div class='text-center'>
-                <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
-                  <i class="fab fa-google me-2"></i> <%= (t'.login_google') %>
-                </button>
-              </div>
-              <br>
-              <div class='text-center'>
-                <button class="btn btn-facebook btn-login text-uppercase fw-bold" type="submit">
-                  <i class="fab fa-facebook-f me-2"></i> <%= (t'.login_facebook') %>
-                </button>
+              <div class="d-grid mb-2">
+                <%= f.submit "Googleでログインする", class: "btn btn-danger btn-lg btn-login fw-bold"%>
               </div>
             <% end %>
           </div>

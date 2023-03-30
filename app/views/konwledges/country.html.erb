@@ -1,9 +1,7 @@
 <div class="container-fluid country">
-  <br>
-  <br>
-  <h1 class="my-6 text-center text-white"> ウイスキーの原産国について</h1>
-  <br>
-
+  <div class="container py-4">
+    <h1 class="my-6 text-center text-white"> ウイスキーの原産国について</h1>
+  </div>
   <!-- Project One -->
   <div class="row">
     <div class="col-md-9 mx-auto">
@@ -11,14 +9,13 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <%= image_tag 'scotland.png', size: '60x40' %>　スコットランド
+              <%= image_tag 'scotland.png', size: '50x30' %>　スコットランド
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <strong>
                 ◆スコッチ・ウイスキー(スコッチ)◆<br>
-                <br>
                 ・モルトウイスキーにグレーンウイスキーをブレンドした「ブレンデッドウイスキー」がメインであり、<br>
                 　さらにピート(泥炭)を焚いて独特のスモーキーな風味が特徴とするウイスキーが多い
               </strong>
@@ -28,14 +25,13 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <%= image_tag 'irland.png', size: '60x40' %>　アイルランド
+              <%= image_tag 'irland.png', size: '50x30' %>　アイルランド
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <strong>
                 ◆アイリッシュ・ウイスキー（アイラウイスキー）◆<br>
-                <br>
                 ・アイリッシュ・ウイスキーはピート(泥炭)を用いずに製造するため、すっきりとした風味のある軽やかな仕上がりのウイスキーが多い
               </strong>
             </div>
@@ -44,14 +40,13 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <%= image_tag 'america.png', size: '60x40' %>　アメリカ
+              <%= image_tag 'america.png', size: '50x30' %>　アメリカ
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <strong>
                 ◆アメリカン・ウイスキー◆<br>
-                <br>
                 ・アメリカ合衆国では、様々な州でそれぞれの気候や風土の特色を活かしたアメリカン・ウイスキーが製造されている<br>
                 ・中でも特に有名なウイスキーとして、ケンタッキー州を中心とした地域で作られている「バーボンウイスキー」がある
               </strong>
@@ -61,14 +56,13 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              <%= image_tag 'canada.png', size: '60x40' %>　カナダ
+              <%= image_tag 'canada.png', size: '50x30' %>　カナダ
             </button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <strong>
                 ◆カナディアン・ウイスキー◆<br>
-                <br>
                 ・「カナディアン・ウイスキー」は、スコッチやアイリッシュ、アメリカンといった各地のウイスキーに比べるとライトな仕上がりのもが多い<br>
                 ・口当たり良く飲みやすいため、ウイスキー初心者でも挑戦しやすい
               </strong>
@@ -78,14 +72,13 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFive">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            <%= image_tag 'japan.png', size: '60x40' %>　日本
+            <%= image_tag 'japan.png', size: '50x30' %>　日本
             </button>
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <strong>
                 ◆ジャパニーズ・ウイスキー◆<br>
-                <br>
                 ・スコッチ・ウイスキーを手本としつつ、独自の進化・発展を遂げた穏やかで繊細な味わいのウイスキーが多い<br>
                 ・日本人の味覚に合わせてピート(泥炭)の使用量をうまく調整した「かすかなスモーキーフレーバー感」を楽しめる
               </strong>
@@ -113,15 +106,15 @@
         </div>
       </div>
     </div>
-    <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
-      <p class>
-        <div class="btn-group me-2" role="group" aria-label="第一グループ">
-          <%= link_to '前へ', whiskey_konwledge_path, class: 'btn btn-secondary btn-lg text-white' %>
-        </div>
-        <div class="btn-group me-2" role="group" aria-label="第二グループ">
-          <%= link_to '次へ', how_to_drink_konwledge_path, class: 'btn btn-primary btn-lg text-white' %>
-        </div>
-      </p>
-    </div>
+  </div>
+  <div class="btnbar" role="toolbar" aria-label="ボタングループのツールバー">
+    <p class>
+      <div class="btn-group me-2" role="group" aria-label="第一グループ">
+        <%= link_to '前へ', whiskey_konwledge_path, class: 'btn btn-secondary btn-lg text-white' %>
+      </div>
+      <div class="btn-group me-2" role="group" aria-label="第二グループ">
+        <%= link_to '次へ', how_to_drink_konwledge_path, class: 'btn btn-primary btn-lg text-white' %>
+      </div>
+    </p>
   </div>
 </div>

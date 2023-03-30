@@ -11,8 +11,13 @@
         <div class="col-md-4">
           <div class="text-center">
             <%= image_tag @user.avatar.url, class: 'avatar img-circle img-thumbnail', alt: 'avatar', id: 'preview' %>
-            <%= f.file_field :avatar, onchange: 'previewFileWithId(preview)', class: 'form-control mb-5', accept: 'image/*' %>
-            <%= f.hidden_field :avatar_cache %>
+          </div>
+          <br>
+          <div class="text-center">
+            <div class="col-md-11">
+              <%= f.file_field :avatar, onchange: 'previewFileWithId(preview)', class: 'form-control', accept: 'image/*' %>
+              <%= f.hidden_field :avatar_cache %>
+            </div>
           </div>
         </div>
         <div class="col-md-7">
@@ -28,7 +33,7 @@
             <%= f.label :introduction %>
             <%= f.text_area :introduction, class: 'form-control mb-4', rows: '7' %>
           </div>
-          <%= f.submit class: 'btn btn-primary' %>
+          <%= f.submit class: 'btn btn-secondary btn-lg fw-bold' %>
         </div>
       </div>
     <% end %>
