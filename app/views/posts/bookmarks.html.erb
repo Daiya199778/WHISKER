@@ -3,24 +3,24 @@
 <main class="flex-grow p-0">
   <div class="container pt-4">
     <div class="row">
-        <div class="col-12">
-          <%= render 'search_form', url: bookmarks_posts_path %>
-          <div class="row">
-            <% if @bookmark_posts.present? %>
-              <%= render @bookmark_posts %>
-            <% else %>
+      <div class="col-12">
+        <%= render 'search_form', url: bookmarks_posts_path %>
+        <div class="row p-2">
+          <% if @bookmark_posts.present? %>
+            <%= render @bookmark_posts %>
+          <% else %>
+            <div class="row p-0">
               <div class="row justify-content-center">
                 <p class="col-auto"><%= t('.no_result') %></p>
               </div>
-              <div class="row p-5"></div>
-              <div class="row p-5"></div>
-              <div class="row p-5"></div>
-              <div class="row p-3"></div>
-            <% end %>
-          </div>
-          <!-- ページネーション -->
-          <%= paginate @bookmark_posts %>
+            </div>
+            <div class="row p-5"></div>
+            <div class="row p-5"></div>
+            <div class="row p-5"></div>
+          <% end %>
         </div>
+        <!-- ページネーション -->
+        <%= paginate @bookmark_posts %>
       </div>
     </div>
   </div>
