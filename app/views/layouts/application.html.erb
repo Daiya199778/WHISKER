@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <!--%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %-->
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- stylesheet_pack_tagは、CSSをWebpackerで管理する際に記述する。つまり、CSSをapp/javascripts/stylesheetsで管理する際に必要。-->
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- stylesheet_link_tagは、CSSをこれまでのRailsでの管理方法（Sprockets）で管理する際に記述する。-->
