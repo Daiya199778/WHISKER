@@ -3,7 +3,7 @@
     <%= form_with model: comment, url: [post, comment], local: false, id: 'new_comment' do |f| %>
       <%= f.text_area :body, class: 'form-control mb-3', id: 'js-new-comment-body', row: 4, placeholder: 'コメントを入力してください' %>
       <div class="btn-group-form">
-        <%= f.submit t('defaults.comment'), class: 'btn btn-primary' %>
+        <%= f.submit t('defaults.comment'), class: 'btn btn-secondary btn-lg fw-bold' %>
       </div>
     <% end %>
   </div>
