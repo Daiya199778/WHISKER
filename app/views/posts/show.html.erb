@@ -12,12 +12,11 @@
       <div class="col-lg-6">
         <div class="card mb-3 mb-lg-0">
           <div class="card-body">
-            <h5 class="my-0 bi bi-pencil-fill"></h5>
-            <%= @post.title %>
-            <h5 class="my-0 bi bi-chat-square-text-fill"></h5>
-            <%= @post.body %>
+            <h5 class="my-0 bi bi-pencil-fill"> <%= @post.title %></h5>
             <hr>
-            <h3 class="my-3"><%= t('.category')%></h3>
+            <h5 class="my-0 bi bi-chat-square-text-fill"> <%= @post.body %></h5>
+            <hr>
+            <h4 class="my-3"><%= t('.category')%></h4>
 
             <p class="bi bi-trash2-fill"> <%= @post.whiskey_brand %></p>
 
