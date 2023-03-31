@@ -1,6 +1,13 @@
 class PostImageUploader < CarrierWave::Uploader::Base
   
-  storage :file
+  #開発環境ごとに保存先を変える記述方法
+  if Rails.env.development?
+    storage :file
+  elsif Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
