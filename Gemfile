@@ -74,3 +74,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'ransack', '~> 3.2', '>= 3.2.1'
+#AWSで画像保存でするgem
+gem 'fog-aws'
+gem "aws-sdk-s3", require: false 
+#環境変数を管理するgem
+gem 'dotenv-rails'
