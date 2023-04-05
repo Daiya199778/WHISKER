@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <%# #google_mapの位置情報 %>
+    <%= include_gon(init: true) %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <!-- stylesheet_pack_tagは、CSSをWebpackerで管理する際に記述する。つまり、CSSをapp/javascripts/stylesheetsで管理する際に必要。-->
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- stylesheet_link_tagは、CSSをこれまでのRailsでの管理方法（Sprockets）で管理する際に記述する。-->
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application',  media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- stylesheet_pack_tagは、CSSをWebpackerで管理する際に記述する。つまり、CSSをapp/javascripts/stylesheetsで管理する際に必要。-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     
     <!--プルダウンが上手く開かない時があるので、jqueryとcdnjsをコメントアウトする>

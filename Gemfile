@@ -79,3 +79,7 @@ gem 'fog-aws'
 gem "aws-sdk-s3", require: false 
 #環境変数を管理するgem
 gem 'dotenv-rails'
+#googleの位置情報機能のgem
+gem 'geocoder'
+gem 'gon'
+gem 'google_places'

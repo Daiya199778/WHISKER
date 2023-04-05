@@ -1,0 +1,3 @@
+class ShopField < ApplicationRecord
+  
+end

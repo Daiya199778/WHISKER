@@ -155,9 +155,20 @@ GEM
     font-awesome-sass (5.11.2)
       sassc (>= 1.11)
     formatador (1.1.0)
+    geocoder (1.8.1)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    gon (6.4.0)
+      actionpack (>= 3.0.20)
+      i18n (>= 0.7)
+      multi_json
+      request_store (>= 1.0)
+    google_places (2.0.0)
+      httparty (>= 0.13.1)
     hashie (5.0.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -292,6 +303,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.7.0)
+    request_store (1.5.1)
+      rack (>= 1.4)
     rexml (3.2.5)
     rspec-core (3.12.1)
       rspec-support (~> 3.12.0)
@@ -416,6 +429,9 @@ DEPENDENCIES
   faker
   fog-aws
   font-awesome-sass (~> 5.11.2)
+  geocoder
+  gon
+  google_places
   jbuilder (~> 2.7)
   jquery-rails
   kaminari

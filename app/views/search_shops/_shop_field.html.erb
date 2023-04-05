@@ -1,0 +1,20 @@
+<div class="card mb-4 mx-auto border border-secondary border-2" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-6 py-4 px-4">
+      <% if shop_field.image %>
+        <%= image_tag shop_field.image, class: 'card img-fluid rounded-3', style: 'max-width: 100%; height: auto;' %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <div class="card-title mx-auto">
+        <h3 class="py-5 px-3"><%= shop_field.name %></h3>
+      </div>
+      <div class="card-text">
+        <p class="pb-2 px-3"><%= shop_field.address.gsub(/日本、/,"") %></p>
+        <%= link_to "https://www.google.com/maps/search/?api=1&query=#{shop_field.name}", target: :_blank, rel: "noopener noreferrer", class: 'px-3', style: 'color: black' do %>
+          Google Mapで表示する
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
