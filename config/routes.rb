@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   get 'guest_login', to: 'user_sessions#guest_login'
 
+  #google_位置情報
+  get "search_shops", to: "search_shops#search"
+
   #ユーザーの新規登録機能
   #resources :users, only: %i[new create]にすると、エラー時にusersというURLへ遷移するためrouting errorになる！
   get 'users', to: 'users#new'

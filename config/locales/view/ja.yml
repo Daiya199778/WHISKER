@@ -85,3 +85,6 @@ ja:
       title: 'プロフィール編集'
       success: 'プロフィールを変更しました'
       fail: 'プロフィールを変更できません'
+  search_shops:
+    search: 
+      title: 'ショップ検索'

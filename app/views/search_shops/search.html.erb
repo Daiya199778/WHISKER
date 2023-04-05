@@ -1,0 +1,87 @@
+<% content_for(:title, t(".title")) %>
+<main class="flex-grow p-4">
+  <div class="content">
+    <div class="text-center p-4">
+      <h1>ショップ検索</h1>
+      <div class="search_container m-auto">
+        <%= form_with url: search_shops_path, method: :get do |f| %>
+          <%= f.text_field :keyword, placeholder: 'キーワード検索', size: '25' %>
+          <%= button_tag type: 'submit', class: 'btn btn-default' do %>
+            <i class="fa-solid fa-magnifying-glass fa-lg mb-1"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div id="map" class="card border-dark mt-3"></div>
+  <div class="content mx-auto pt-3">
+    <%= render partial: 'shop_field', collection: @shop_fields %>
+  </div>
+</main>
+
+<script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?v=3&key=<%= ENV['GOOGLE_API_KEY'] %>&language=ja&region=JP"></script>
+
+<style>
+#map{
+  height: 500px;
+  margin: 0 auto;
+
+}
+</style>
+
+<script>
+  let mapInstance
+  let marker = []
+  let infoWindow = []
+
+  function initMap() {
+    if (gon.shopLat) {
+      mapInstance = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: gon.shopLat[0], lng: gon.shopLng[0]},
+        zoom: 10,
+        mapTypeControl: false,
+        fullscreenControl: false,
+        streetViewControl: false
+      });
+
+      for (var i = 0; i < gon.shopLat.length; i++) {
+        let pos = new google.maps.LatLng({
+          lat: gon.shopLat[i],
+          lng: gon.shopLng[i]
+        });
+        marker[i] = new google.maps.Marker({//地図にマーカを追加
+          map: mapInstance,
+          position: pos,
+          icon: {
+            url: "app/assets/images/mark.png",
+            scaledSize: new google.maps.Size(40,40)
+          },
+        });
+        infoWindow[i] = new google.maps.InfoWindow({ //吹き出しを追加
+          content: `<div>(${[i + 1]})・${gon.shopname[i]}</div>`
+        });
+
+        markerEvent(i); 
+      }
+    }
+    else{
+      mapInstance = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 34.7024898, lng: 135.4937619},
+        zoom: 10,
+        mapTypeControl: false,
+        fullscreenControl: false,
+        streetViewControl: false
+      });
+    }
+  }
+
+  function markerEvent(i) { //マーカをクリックしたときに吹き出しを表示
+    marker[i].addListener('click', function() {
+      infoWindow[i].open(map, marker[i]);
+    });
+  }
+
+  window.onload = function () {
+    initMap();
+  };
+</script>
