@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  #google認証のための外部認証の関連付け
+  has_many :authentications, dependent: :destroy
+  accepts_nested_attributes_for :authentications
+
   mount_uploader :avatar, AvatarUploader
   #Userモデルに、postモデルとの関連付けを追加
   has_many :posts, dependent: :destroy
