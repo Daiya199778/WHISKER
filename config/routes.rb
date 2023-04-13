@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     end
   end
 
+  #プライバシポリシーのルーティング
+  get "homes/privacy_policy", to: "homes#privacy_policy"
+  get "homes/terms", to: "homes#terms"
+
   #googleログイン認証のルーティング
   post "oauth/callback", to: "oauths#callback"
   get "oauth/callback", to: "oauths#callback"
