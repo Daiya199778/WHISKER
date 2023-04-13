@@ -83,3 +83,8 @@ gem 'dotenv-rails'
 gem 'geocoder'
 gem 'gon'
 gem 'google_places'
+#google認証機能のgem
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem 'config'
+gem 'googleauth'
