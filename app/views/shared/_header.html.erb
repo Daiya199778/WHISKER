@@ -49,8 +49,9 @@
                   マイページ
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to (t'profiles.show.title'), profile_path, class: 'dropdown-item' %></li>
-                  <li><%= link_to (t'profiles.edit.title'), edit_profile_path, class: 'dropdown-item' %></li>
+                  <!--ユーザーごとにプロフィール画面を変えるためには、pathの後ろに変数を入れてあげる-->
+                  <li><%= link_to (t'profiles.show.title'), profile_path(:user_id), class: 'dropdown-item' %></li>
+                  <li><%= link_to (t'profiles.edit.title'), edit_profile_path(:user_id), class: 'dropdown-item' %></li>
                   <!--hr class="dropdown-divider"-->
                 </ul>
               </li>

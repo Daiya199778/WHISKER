@@ -13,7 +13,10 @@ class ProfilesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    #ユーザープロフィールの表示
+    @user = User.find(params[:id])
+  end
 
   private
 
