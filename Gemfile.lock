@@ -296,9 +296,15 @@ GEM
       oauth2 (~> 2.0.6)
       omniauth (~> 2.0)
       omniauth-oauth2 (~> 1.8.0)
+    omniauth-oauth (1.2.0)
+      oauth
+      omniauth (>= 1.0, < 3)
     omniauth-oauth2 (1.8.0)
       oauth2 (>= 1.4, < 3)
       omniauth (~> 2.0)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     os (1.1.4)
     parallel (1.22.1)
     parser (3.2.1.0)
@@ -505,6 +511,7 @@ DEPENDENCIES
   mini_magick
   omniauth
   omniauth-google-oauth2
+  omniauth-twitter
   pg
   pry-byebug
   puma (~> 5.0)
