@@ -28,9 +28,8 @@
               </div>
               <hr class="my-4">
               <div class="d-grid mb-2">
-                <!--%= link_to 'Login with Google', auth_at_provider_path(provider: :google), class: "btn btn-danger btn-lg btn-login fw-bold" %-->
-                <%# <%= f.submit "Googleでログインする", auth_at_provider_path(provider: :google), class: "btn btn-danger btn-lg btn-login fw-bold" %> 
-                <%= f.submit "Googleでログインする", class: "btn btn-danger btn-lg btn-login fw-bold"%>
+                <!--%= link_to 'Googleでログインする', auth_at_provider_path(provider: :google), class: "btn btn-danger btn-lg btn-login fw-bold" %-->
+                <%= link_to 'Twitterでログインする', auth_at_provider_path(provider: :twitter), class: "btn btn-primary btn-lg btn-login fw-bold" %>
               </div>
             <% end %>
           </div>
