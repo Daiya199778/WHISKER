@@ -2,3 +2,5 @@ default_url_options:
   host: 'www.alcohol-whisker.com'
 sorcery:
   google_callback_url: 'https://www.alcohol-whisker.com/oauth/callback?provider=google'
+sorcery:
+  callback_url: 'https://www.alcohol-whisker.com/oauth/callback?provider=twitter'

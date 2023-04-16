@@ -1,8 +1,8 @@
 class OauthsController < ApplicationController
-  require "googleauth/id_tokens/errors"
-  require 'googleauth/id_tokens/verifier'
   skip_before_action :require_login
-  protect_from_forgery except: :callback
+  #require "googleauth/id_tokens/errors"
+  #require 'googleauth/id_tokens/verifier'
+  #protect_from_forgery except: :callback
   # before_action :verify_g_csrf_token, only: :callback
 
   def oauth
@@ -11,17 +11,18 @@ class OauthsController < ApplicationController
 
   def callback
     provider = auth_params[:provider]
-
-    if auth_params[:denied].present? || auth_params[:error] == 'ACCESS_DENIED'
-      redirect_to login_path, warning: 'ログインをキャンセルしました'
+    #binding.pry
+    if auth_params[:denied].present?
+      redirect_to posts_path, success: '指定アカウントでログインしました'
       return
     end
 
     begin
       create_user_from(provider) unless (@user = login_from(provider))
-      redirect_to posts_path(@post), success: "#{provider.titleize}アカウントでログインしました"
+      redirect_to posts_path, success: "指定アカウントでログインしました"
+
     rescue StandardError
-      redirect_to login_path, danger: "#{provider.titleize}アカウントでのログインに失敗しました"
+      redirect_to login_path, danger: "指定アカウントでのログインに失敗しました"
     end
   end
 
@@ -45,13 +46,12 @@ class OauthsController < ApplicationController
   private
 
   def auth_params
-    params.permit(:code, :provider, :denied, :error, :state)
+    params.permit(:code, :provider, :denied)
   end
 
   def create_user_from(provider)
     @user = create_from(provider)
-    # NOTE: this is the place to add '@user.activate!' if you are using user_activation submodule
-    reset_session # protect from session fixation attack
+    reset_session
     auto_login(@user)
   end
 
