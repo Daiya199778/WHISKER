@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   #パスワードリセットのルーティング
   resources :password_resets, only: %i[new create edit update]
-  #get "password_reset/edit", to: "passoword_reset#edit"
-
 
   #ウイスキー豆知識のルーティング
   resource :konwledge, only: %i[show] do

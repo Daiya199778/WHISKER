@@ -7,6 +7,8 @@ ja:
     login: 'ログイン'
     user_register: 'ユーザー登録'
     register: '登録'
+    password_reset: '申請する'
+    password_update: '更新する'
     logout: 'ログアウト'
     comment: 'コメント'
     search_word: '検索ワード'
@@ -88,3 +90,13 @@ ja:
   search_shops:
     search: 
       title: 'ショップ検索'
+  password_resets:
+    create:
+      success: 'パスワードリセット申請を送信しました'
+    new:
+      title: 'パスワードリセット申請'
+    edit:
+      title: 'パスワードリセット'
+    update:
+      success: 'パスワードが変更されました'
+      fail: 'パスワードが変更できませんでした'

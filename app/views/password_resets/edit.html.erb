@@ -1,7 +1,8 @@
 <% content_for(:title, t('.title')) %>
-<body>
-  <main class="flex-grow p-0">
+  <body class="flex-grow p-0">
     <div class="container">
+      <br>
+      <br>
       <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
           <div class="card border-0 shadow rounded-3 my-5">
@@ -14,19 +15,15 @@
                   <%= f.label :email %>
                 </div>
                 <div class="form-floating mb-4">
-                  <%= f.password_field :password, class: 'form-control', placeholder: 'Password', id: 'floatingPassword' %>
-                  <%= f.label :password %>
+                  <%= f.password_field :password_reset, class: 'form-control', placeholder: 'Password', id: 'floatingPassword' %>
+                  <%= f.label :password_reset %>
                 </div>
                 <div class="form-floating mb-5">
-                  <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password確認用', id: 'floatingPassword_Confirmation' %>
-                  <%= f.label :password_confirmation %>
+                  <%= f.password_field :password_reset_confirmation, class: 'form-control', placeholder: 'Password確認用', id: 'floatingPassword_Confirmation' %>
+                  <%= f.label :password_reset_confirmation %>
                 </div>
                 <div class='d-grid mb-2'>
-                  <%= f.submit (t'defaults.register'), class: 'btn btn-secondary btn-lg fw-bold' %>
-                </div>
-                <br>
-                <div class='text-center'>
-                  <%= link_to (t'.to_login_page'), login_path %>
+                  <%= f.submit (t'defaults.password_update'), class: 'btn btn-secondary btn-lg fw-bold' %>
                 </div>
               <% end %>
             </div>
@@ -34,6 +31,4 @@
         </div>
       </div>
     </div> 
-    <br>
-  </main>
-</body>
+  </body>
