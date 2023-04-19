@@ -51,4 +51,6 @@ Rails.application.routes.draw do
   # ブックマークのcreateアクションとdestroyアクション
   resources :bookmarks, only: %i[create destroy]
   resources :profiles, only: %i[show edit update]
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
