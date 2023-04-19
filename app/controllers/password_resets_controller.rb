@@ -4,7 +4,8 @@ class PasswordResetsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:email])
-    @user.deliver_reset_password_instructions! if @user
+    @user&.deliver_reset_password_instructions!
+    #@user.deliver_reset_password_instructions! if @user
     # @user.deliver_reset_password_instructions! if @userでも可
     redirect_to login_path, success: t('.success')
   end
