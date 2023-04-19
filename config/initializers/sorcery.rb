@@ -4,7 +4,7 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging,
 # :magic_login, :external
-Rails.application.config.sorcery.submodules = [:external]
+Rails.application.config.sorcery.submodules = [:external, :reset_password]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -109,7 +109,7 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.twitter.key = ENV['TWITTER_API_KEY']
   config.twitter.secret = ENV['TWITTER_API_KEY_SECRET']
-  config.twitter.callback_url = Settings.sorcery[:callback_url]
+  config.twitter.callback_url = Settings.sorcery[:twitter_callback_url]
   config.twitter.user_info_path = "/1.1/account/verify_credentials.json?include_email=true"
   config.twitter.user_info_mapping = {
     email: 'email',
@@ -371,7 +371,7 @@ Rails.application.config.sorcery.configure do |config|
     # Password reset mailer class.
     # Default: `nil`
     #
-    # user.reset_password_mailer =
+    user.reset_password_mailer = UserMailer
 
     # Reset password email method on your mailer class.
     # Default: `:reset_password_email`

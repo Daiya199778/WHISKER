@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'static_pages#top'
 
+  #パスワードリセットのルーティング
+  resources :password_resets, only: %i[new create edit update]
+
   #ウイスキー豆知識のルーティング
   resource :konwledge, only: %i[show] do
     collection do
@@ -46,4 +49,6 @@ Rails.application.routes.draw do
   # ブックマークのcreateアクションとdestroyアクション
   resources :bookmarks, only: %i[create destroy]
   resources :profiles, only: %i[show edit update]
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
