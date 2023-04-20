@@ -47,7 +47,7 @@ Rails.application.configure do
   # :smtpモードでの設定情報
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com', # SMTPサーバーのホスト名
-    domain: 'heroku.com', #Gmailを使う場合
+    domain: 'smtp.gmail.com', #Gmailを使う場合
     port: 587, # SMTPサーバーのポート番号
     user_name: 'daiya199778@gmail.com', # Gmailアドレス
     password: 'boxezjggfbbsuhcl', # アプリパスワード
