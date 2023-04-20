@@ -7,7 +7,7 @@ ja:
     login: 'ログイン'
     user_register: 'ユーザー登録'
     register: '登録'
-    password_reset: '申請する'
+    password_reset: 'パスワードリセット'
     password_update: '更新する'
     logout: 'ログアウト'
     comment: 'コメント'

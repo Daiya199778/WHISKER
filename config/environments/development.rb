@@ -37,11 +37,23 @@ Rails.application.configure do
   #config.active_storage.service = :amazon
 
   # Don't care if the mailer can't send.
-  #config.action_mailer.raise_delivery_errors = false
 
-  #config.action_mailer.perform_caching = false
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_caching = false
+  # パスワードリセット処理時、Gmailからメールを送信できるようにする
   config.action_mailer.default_url_options = Settings.default_url_options.to_h
+  config.action_mailer.raise_delivery_errors = true
+  # メールを送信する方法
+  config.action_mailer.delivery_method = :smtp
+  # :smtpモードでの設定情報
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com', # SMTPサーバーのホスト名
+    domain: 'gmail.com', #Gmailを使う場合
+    port: 587, # SMTPサーバーのポート番号
+    user_name: ENV['GMAIL_ADDRESS'], # Gmailアドレス
+    password: ENV['GMAIL_APPKEY'], # アプリパスワード
+    authentication: :login, # 認証方法
+    enable_starttls_auto: true # メールの送信にTLS認証を使用する
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
