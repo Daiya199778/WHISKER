@@ -80,8 +80,8 @@ Rails.application.configure do
     address: 'smtp.gmail.com', # SMTPサーバーのホスト名
     domain: 'smtp.gmail.com', #Gmailを使う場合
     port: 587, # SMTPサーバーのポート番号
-    user_name: 'daiya199778@gmail.com', # Gmailアドレス
-    password: 'boxezjggfbbsuhcl', # アプリパスワード
+    user_name: ENV['GMAIL_ADDRESS'], # Gmailアドレス
+    password: ENV['GMAIL_APPKEY'], # アプリパスワード
     authentication: :login, # 認証方法
     enable_starttls_auto: true # メールの送信にTLS認証を使用する
   }
