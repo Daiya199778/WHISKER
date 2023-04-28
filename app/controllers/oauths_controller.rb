@@ -8,16 +8,16 @@ class OauthsController < ApplicationController
   def callback
     provider = auth_params[:provider]
     if auth_params[:denied].present?
-      redirect_to posts_path, success: '指定アカウントでログインしました'
+      redirect_to posts_path, success: 'Twitterアカウントでログインしました'
       return
     end
 
     begin
       create_user_from(provider) unless (@user = login_from(provider))
-      redirect_to posts_path, success: "指定アカウントでログインしました"
+      redirect_to posts_path, success: "Twitterアカウントでログインしました"
 
     rescue StandardError
-      redirect_to login_path, danger: "指定アカウントでのログインに失敗しました"
+      redirect_to login_path, danger: "Twitterアカウントでのログインに失敗しました"
     end
   end
 
