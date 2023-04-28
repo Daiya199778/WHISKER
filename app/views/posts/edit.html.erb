@@ -1,9 +1,9 @@
 <% content_for(:title, t('.title')) %>
-<main class="flex-grow p-0">
+<body class="flex-grow p-0">
   <div class="container">
     <div class="row g-4">
       <h1 class="py-5 text-center"><%= t('.title') %></h1>
       <%= render 'form', { post: @post } %>
     </div>
   </div>
-</main>
+</body>

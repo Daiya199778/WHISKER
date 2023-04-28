@@ -1,5 +1,5 @@
 <% content_for(:title, t(".title")) %>
-<main class="flex-grow p-4">
+<body class="flex-grow p-0">
   <div class="content">
     <div class="text-center p-4">
       <h1>ショップ検索</h1>
@@ -17,7 +17,7 @@
   <div class="content mx-auto pt-3">
     <%= render partial: 'shop_field', collection: @shop_fields %>
   </div>
-</main>
+</body>
 
 <script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?v=3&key=<%= ENV['GOOGLE_API_KEY'] %>&language=ja&region=JP"></script>
 
