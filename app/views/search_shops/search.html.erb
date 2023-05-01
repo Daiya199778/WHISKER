@@ -57,7 +57,7 @@
           },
         });
         infoWindow[i] = new google.maps.InfoWindow({ //吹き出しを追加
-          content: `<div>(${[i + 1]})・${gon.shopname[i]}</div>`
+          content: `<div>${gon.shopname[i]}</div>`
         });
 
         markerEvent(i); 

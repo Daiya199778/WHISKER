@@ -6,7 +6,7 @@ class SearchShopsController < ApplicationController
 
     if keyword.present?
       client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
-      results = client.spots_by_query(keyword, lat: 34.7024898, lng: 135.4937619, language: 'ja', types: 'shop', region: 'ja')
+      results = client.spots_by_query(keyword, lat: 34.7024898, lng: 135.4937619, language: 'ja', region: 'ja', types: 'liquor_store')
 
       @shop_fields = results.map do |result|
         ShopField.new(read(result))
