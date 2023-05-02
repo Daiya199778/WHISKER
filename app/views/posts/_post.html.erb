@@ -18,11 +18,8 @@
             <%= l post.created_at, format: :long %>
           </p>
           <p class="card-text">
-            <% post.whiskey_types.each do |whiskey_type| %>
-              <%# binding.pry %> 
-              <i class="bi bi-bricks"></i>
-              <%= whiskey_type.name %>
-            <% end %> 
+            <i class="bi bi-trash2-fill"></i>
+            <%= post.whiskey_brand %>
           </p>
           <p class="card-text">
             <% post.countries.each do |country| %>
@@ -32,8 +29,15 @@
             <% end %> 
           </p>
           <p class="card-text">
-            <i class="bi bi-currency-yen"></i>
-            <%= post.price %>
+            <% post.whiskey_types.each do |whiskey_type| %>
+              <%# binding.pry %> 
+              <i class="bi bi-bricks"></i>
+              <%= whiskey_type.name %>
+            <% end %> 
+          </p>
+          <%# <p class="card-text">
+            <i class="bi bi-currency-yen"></i> %>
+            <%#= post.price %>
           </p>
         </div>
       </div>

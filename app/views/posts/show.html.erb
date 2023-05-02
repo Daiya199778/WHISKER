@@ -6,18 +6,18 @@
     <h1 class="my-4"><%= t('.title') %></h1>
     <!-- Portfolio Item Row -->
     <div class="row">
-      <div class="col-md-6">
-        <%= image_tag @post.post_image_url, class: 'card-img-top', size: '700x355' %>
+      <div class="col-md-5">
+        <%= image_tag @post.post_image_url, class: 'card-img-top', size: '500x380' %>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-7">
         <div class="card mb-3 mb-lg-0">
           <div class="card-body">
-            <h5 class="my-0 bi bi-pencil-fill"> <%= @post.title %></h5>
+            <h6 class="my-0 bi bi-pencil-fill"> <%=t('activerecord.attributes.post.title')%></h6>
+            <div><%= @post.title %></div>
             <hr>
-            <h5 class="my-0 bi bi-chat-square-text-fill"> <%= @post.body %></h5>
+            <h6 class="my-0 bi bi-chat-square-text-fill"> <%=t('activerecord.attributes.post.body')%></h6>
+            <%= @post.body %>
             <hr>
-            <h4 class="my-3"><%= t('.category')%></h4>
-
             <p class="bi bi-trash2-fill"> <%= @post.whiskey_brand %></p>
 
             <% @post.whiskey_types.each do |whiskey_type| %>
@@ -32,10 +32,10 @@
               <%= @post.price %>
               <!--%= render 'crud_menus', post: @post if current_user.own?(@post) %-->
               <% if current_user.own?(@post) %>
-              　　　　　　　　　　　　　　　　　　　　　　　
+              　　　　　　　　　　　　　　　　　　　　　　　　　　　　
                 <%= render 'crud_menus', post: @post %>
               <% else %>
-              　　　　　　　　　　　　　　　　　　　　　　　　　
+              　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
                 <%= render 'bookmark_button', post: @post %>
               <% end %>
             </p>
