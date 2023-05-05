@@ -1,0 +1,41 @@
+<div class="modal fade" id="modal13" aria-hidden="true" aria-labelledby="modalLabel13" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">メーカーズマーク</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        オレンジのような華やかさと、ハチミツやバニラのようななめらかな甘みは、他のバーボンでは味わえない美味しさがある。<br>
+        オレンジやハチミツを加えて呑むのもあり。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%BA%E3%83%9E%E3%83%BC%E3%82%AF/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal14" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal14" aria-hidden="true" aria-labelledby="modalLabel14" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">ウッドフォードリザーブ</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        癖のない味わいで、どんな割り材と合わせても喧嘩しないのが特徴である。<br>
+        なめらかな口当たりと甘みがあり、砂糖やハチミツを入れて甘みを加えるとより美味しく仕上がる。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%82%A6%E3%83%83%E3%83%89%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%96/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal13" data-bs-toggle="modal">戻る</button>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn btn-secondary" data-bs-toggle="modal" href="#modal13" role="button">おすすめ</a>

@@ -1,0 +1,63 @@
+<div class="modal fade" id="modal1" aria-hidden="true" aria-labelledby="modalLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">グレングラント アルボラリス</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        色味は明るい黄金色で、ソフトでスムースな口当たり。<br>
+        口に含むと広がる香りと味わいは、さまざまな要素が複雑に混ざりながら調和し、ストレートでじっくりと楽しめます。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%82%B0%E3%83%AC%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%88+%E3%82%A2%E3%83%AB%E3%83%9C%E3%83%A9%E3%83%AA%E3%82%B9/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="modalLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">ザ・グレンリベット12年</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        色味はあざやかで明るい金色。<br>
+        香りはフルーティーで且つ特有のバニラ香、 はちみつの甘さを伴う芳醇でソフトな風味が感じられる。<br>
+        長くクリーミーで滑らかな余韻に浸ることができるため、ストレートで楽しむのにおすすめ。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%82%B6%E3%83%BB%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%AA%E3%83%99%E3%83%83%E3%83%8812%E5%B9%B4/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal1" data-bs-toggle="modal">戻る</button>
+        <button class="btn btn-primary" data-bs-target="#modal3" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal3" aria-hidden="true" aria-labelledby="modalLabel3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">ブッシュミルズ</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        特長であるトリプル蒸留を行い、軽やかな味わいを演出したウイスキーとなっている。
+        香りはとてもフルーティーでさっぱりとした飲み心地を感じられる。<br>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9F%E3%83%AB%E3%82%BA/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal">戻る</button>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn btn-secondary" data-bs-toggle="modal" href="#modal1" role="button">おすすめ</a>
