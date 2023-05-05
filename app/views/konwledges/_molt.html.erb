@@ -1,0 +1,67 @@
+<div class="modal fade" id="modal1" aria-hidden="true" aria-labelledby="modalLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">ザ・マッカラン12年</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        スコットランド北部のスペイサイドで作れているウイスキー。<br>
+        ザ・マッカラン12年は、華やかな香りや風味のある洗練された味わいで、味と香りのバランスがよいのも特徴。
+        また余韻も非常に長く、バニラやカラメルを思わせる豊潤な香りが漂います。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%82%B6%E3%83%BB%E3%83%9E%E3%83%83%E3%82%AB%E3%83%A9%E3%83%B3/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="modalLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">ラフロイグ</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        スコットランドのアイラ島で製造されるウイスキー。<br>
+        ラフロイグは、燻製のようなスモーキーな香りや、薬品のようなヨード香とも形容されるほど強烈で特徴的なウイスキーです。<br>
+        オイリーな味わい且つスモーキーな香りを楽しみたい方にはオススメのウイスキーだと言えます。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%83%A9%E3%83%95%E3%83%AD%E3%82%A4%E3%82%B0/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal1" data-bs-toggle="modal">戻る</button>
+        <button class="btn btn-primary" data-bs-target="#modal3" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal3" aria-hidden="true" aria-labelledby="modalLabel3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">山崎12年</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        日本で初めて作られたシングルモルトウイスキーであり、<br>
+        サントリーの山崎蒸留所にて製造されているウイスキー。<br>
+        山崎12年は、熟した柿や桃のフルーティーさに、バニラの香味が感じられるウイスキーです。<br>
+        奥行きのある甘みと厚みのある味わいに、バニラと熟成樽由来の木の風味が感じられ、心地よく長い余韻を堪能できるでしょう。<br>
+        ただ、山崎シリーズはどのウイスキーも品薄状態で店頭に並ぶことはほとんどないため、基本的にはインターネットなどでプレミアム価格で買うことになります。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E5%B1%B1%E5%B4%8E12%E5%B9%B4/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal">戻る</button>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn btn-secondary" data-bs-toggle="modal" href="#modal1" role="button">おすすめ</a>

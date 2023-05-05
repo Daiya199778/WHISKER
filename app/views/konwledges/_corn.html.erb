@@ -1,0 +1,41 @@
+<div class="modal fade" id="modal13" aria-hidden="true" aria-labelledby="modalLabel13" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">メロウコーン</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        メロウコーンは、時間をかけて熟成されているので琥珀色でメロウ（なめらか）な味わいが楽しめるウイスキー。<br>
+        オイリーな感じやスパイシーさも感じられ、やさしいとうもろこしの甘みが口一杯に広がります。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%83%A1%E3%83%AD%E3%82%A6%E3%82%B3%E3%83%BC%E3%83%B3/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal14" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal14" aria-hidden="true" aria-labelledby="modalLabel14" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">ジョージ ディッケル No.8</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        ジョージ ディッケル No.8は、独特の濾過方式である「チルドメイプルメロウィング製法」により、まろやかで芳醇な味のウィスキー。<br>
+        軽快な味わいを特徴としており、また、ドライな味と微かな甘味がバランスよく溶け合い、後味の切れ上がりもよい。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%83%87%E3%82%A3%E3%83%83%E3%82%B1%E3%83%AB/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal13" data-bs-toggle="modal">戻る</button>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn btn-secondary" data-bs-toggle="modal" href="#modal13" role="button">おすすめ</a>

@@ -1,0 +1,59 @@
+<div class="modal fade" id="modal4" aria-hidden="true" aria-labelledby="modalLabel4" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">ジョニーウォーカー ブラックラベル 12年</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        ロックにするとスモーキーかつスパイシー、ドライフルーツのような深い甘みが感じられ、味わいのバランスは抜群。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%BC%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AB%E3%83%BC+%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%83%A9%E3%83%99%E3%83%AB+12%E5%B9%B4/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal5" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal5" aria-hidden="true" aria-labelledby="modalLabel5" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">バランタイン 17年</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        味わいのバランスが良く、クリーミーな口当たり、フローラルな華やかさ、ほんのりビター、スパイス、スモークを感じられる。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%83%90%E3%83%A9%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%B3+17%E5%B9%B4/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal4" data-bs-toggle="modal">戻る</button>
+        <button class="btn btn-primary" data-bs-target="#modal6" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal6" aria-hidden="true" aria-labelledby="modalLabel6" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">バッファロートレース</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        キャラメルやハチミツのような甘さ、オレンジやハーブのような爽やかさ、心地良いスパイシーさが楽しめる。
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+          <%= link_to '商品を見る', 'https://search.rakuten.co.jp/search/mall/%E3%83%90%E3%83%83%E3%83%95%E3%82%A1%E3%83%AD%E3%83%BC%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9/', class: 'btn btn-secondary text-white' %>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#modal5" data-bs-toggle="modal">戻る</button>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn btn-secondary" data-bs-toggle="modal" href="#modal4" role="button">おすすめ</a>
