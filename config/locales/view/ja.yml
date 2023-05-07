@@ -36,7 +36,7 @@ ja:
       title: '投稿一覧'
       no_result: '投稿がありません'
     new:
-      title: '新規投稿作成'
+      title: '投稿作成'
       create: '新規投稿する'
     create:
       success: '投稿を作成しました'
@@ -69,7 +69,7 @@ ja:
       title: 'マイページ'
   konwledges:
     show:
-      title: 'ウイスキー豆知識'
+      title: '豆知識'
       show: 'ウイスキーとは'
       history: '歴史について'
       whiskey: '種類について'
