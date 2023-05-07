@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   #ゲストログイン時に使用できるアクションの指定
-  before_action :guest_check, only: [:new, :show, :edit, :create, :destory, :update, :bookmarks]
+  before_action :guest_check, only: [:bookmarks]
   #未ログインでも一覧画面は見れるようにする
   skip_before_action :require_login, only: %i[index]
   #set_postの一文を定義している
