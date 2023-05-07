@@ -1,9 +1,7 @@
 class CommentsController < ApplicationController
   #コメントの編集時にコメントを更新できるようにするために入力
   skip_before_action :verify_authenticity_token
-
   before_action :set_comment, only: %i[update destroy]
-  before_action :guest_check
   
   def create
     @comment = current_user.comments.build(comment_params)

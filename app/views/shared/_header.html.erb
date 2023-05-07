@@ -29,11 +29,7 @@
                   <li><%= link_to (t'konwledges.show.whiskey'), whiskey_konwledge_path, class: 'dropdown-item' %></li>
                   <li><%= link_to (t'konwledges.show.countries'), country_konwledge_path, class: 'dropdown-item' %></li>
                   <li><%= link_to (t'konwledges.show.how_to_drink'), how_to_drink_konwledge_path, class: 'dropdown-item' %></li>
-                  <!--hr class="dropdown-divider"-->
                 </ul>
-              </li>
-              <li class="nav-item">
-                <%= link_to (t'search_shops.search.title'), search_shops_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
                 <%= link_to (t'posts.index.title'), posts_path, class: "nav-link" %>
@@ -43,6 +39,9 @@
               </li>
               <li class="nav-item">
                 <%= link_to (t'posts.bookmarks.title'), bookmarks_posts_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to (t'search_shops.search.title'), search_shops_path, class: "nav-link" %>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
