@@ -9,7 +9,7 @@ class SearchShopsController < ApplicationController
       results = client.spots_by_query(keyword, lat: 34.7024898, lng: 135.4937619, language: 'ja', region: 'ja', types: 'liquor_store')
 
       @shop_fields = results.map do |result|
-        ShopField.new(read(result))
+        ShopField.new(place(result))
       end
       gon.shopLat = @shop_fields.map(&:latitude)
       gon.shopLng = @shop_fields.map(&:longitude)
@@ -21,7 +21,7 @@ class SearchShopsController < ApplicationController
 
   private
 
-  def read(result)
+  def place(result)
     name = result['name']
     latitude = result['lat']
     longitude = result['lng']
