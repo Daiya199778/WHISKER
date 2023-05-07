@@ -14,7 +14,6 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    #ユーザープロフィールの表示
     @user = User.find(params[:id])
   end
 

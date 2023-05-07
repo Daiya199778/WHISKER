@@ -52,17 +52,12 @@
                   <!--ユーザーごとにプロフィール画面を変えるためには、pathの後ろに変数を入れてあげる-->
                   <li><%= link_to (t'profiles.show.title'), profile_path(id: current_user.id), class: 'dropdown-item' %></li>
                   <li><%= link_to (t'profiles.edit.title'), edit_profile_path(id: current_user.id), class: 'dropdown-item' %></li>
-                  <!--hr class="dropdown-divider"-->
                 </ul>
               </li>
               <li class="nav-item">
                 <%= link_to (t'defaults.logout'), logout_path, class: "nav-link", method: :delete %>
               </li>
             </ul>
-            <!--form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="検索..." aria-label="検索...">
-              <button class="btn btn-outline-success flex-shrink-0" type="submit">検索</button>
-            </form-->
           </div>
         </div>
       </div>

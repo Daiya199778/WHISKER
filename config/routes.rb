@@ -37,7 +37,6 @@ Rails.application.routes.draw do
   #resources :users, only: %i[new create]にすると、エラー時にusersというURLへ遷移するためrouting errorになる！
   get 'users', to: 'users#new'
   post 'users', to: 'users#create'
-  #get 'users', to: 'users#show'
 
   resources :posts do
     resources :comments, only: %i[create update destroy], shallow: true

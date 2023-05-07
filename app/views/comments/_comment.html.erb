@@ -1,7 +1,6 @@
 <tr id="comment-<%= comment.id %>">
   <td style="width: 60px">
-    <%= image_tag comment.user.avatar_url, class: 'rounded-circle', size: '60x60' %><!--%= comment.user.avatar_url %-->
-     <%# <p><%= comment.user.name</p> %>
+    <%= image_tag comment.user.avatar_url, class: 'rounded-circle', size: '60x60' %>
   </td>
   <td>
     <h3 class="small"><%= comment.user.name %></h3>
@@ -45,7 +44,6 @@
 
 <script>
   $(function () {
-    // console.log('Hello');
     $(document).on("click", ".js-edit-comment-button", function () {             
       const commentId = $(this).data('comment-id');                 
       const commentLabelArea = $('#js-comment-label-' + commentId);
@@ -78,7 +76,6 @@
       const commentId = $(this).data('update-id');
       const textField = $('#js-textarea-comment-' + commentId);
       const body = textField.val();                             
-      // console.log(commentId);
       $.ajax({                         
         url: '/comments/' + commentId,
         type: 'PATCH',                 

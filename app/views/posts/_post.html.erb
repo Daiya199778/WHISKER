@@ -10,7 +10,6 @@
           <hr class="card-divider">
           <p class="card-text">
             <i class="bi bi-person-video"></i>
-            <!-- post.user.nameでユーザーネームを定義する-->
             <%= link_to post.user.name, profile_path(post.user), class: "link-dark" %>
           </p>
           <p class="card-text">
@@ -23,21 +22,15 @@
           </p>
           <p class="card-text">
             <% post.countries.each do |country| %>
-                <%# binding.pry %>
                 <i class="bi bi-globe-asia-australia"></i>
                 <%= country.name %>
             <% end %> 
           </p>
           <p class="card-text">
             <% post.whiskey_types.each do |whiskey_type| %>
-              <%# binding.pry %> 
               <i class="bi bi-bricks"></i>
               <%= whiskey_type.name %>
             <% end %> 
-          </p>
-          <%# <p class="card-text">
-            <i class="bi bi-currency-yen"></i> %>
-            <%#= post.price %>
           </p>
         </div>
       </div>
