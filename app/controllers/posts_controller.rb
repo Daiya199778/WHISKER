@@ -5,31 +5,23 @@ class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
   #set_postの一文を定義している
   before_action :set_post, only: [:edit, :update, :destroy]
-  #application_controllerにset_searchを記述したから必要なし
-  #before_action :set_q, only: [:index, :new, :create, :edit, :update, :show]
 
   def index
-    #投稿のデータを引っ張ってくる際に、関連付けされたモデルのデータも一緒に取得するために「includes(user)」を使う
-    #@posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page])
     @q = Post.ransack(params[:q])
     @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
     @post = Post.new
-    #binding.pry
     @post.countries.build
     @post.whiskey_types.build
   end
 
   def create
-    #current_user.posts.build=ログインしているユーザーの投稿を@postへ代入する
     @post = current_user.posts.build(post_params)
-    #binding.pry      
     if @post.save
       redirect_to posts_path, success: t('posts.create.success')
     else
-      #binding.pry
       flash.now[:danger] = t('posts.create.fail')
       render :new
     end
@@ -37,7 +29,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    #詳細画面に新しいもの順にコメントが表示される
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
@@ -59,7 +50,6 @@ class PostsController < ApplicationController
   end
 
   def bookmarks
-    #@bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc).page(params[:page])
     @q = current_user.bookmark_posts.ransack(params[:q])
     @bookmark_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
@@ -67,7 +57,6 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    #edit/update/destroyアクションで使う下記の一文をまとめて記載
     @post = current_user.posts.find(params[:id])
   end
 

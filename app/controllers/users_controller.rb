@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  #ログイン画面にてnewアクションとcreateアクションはログインしなくても使えるようにskip_before_action
   skip_before_action :require_login, only: %i[new create]
+  
   def new
     @user = User.new
   end
