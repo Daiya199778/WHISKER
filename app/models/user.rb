@@ -9,7 +9,6 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :bookmarks, dependent: :destroy
-  #なぜ、引数が「bookmark_posts」になるかというと、投稿元のモデル（post）はhas_manyで使われているから使えない！
   #その代わりに、「through: :bookmarks, source: :post」の「source: :post」を追加するのことによって、postモデルのことですよ！と明示している！
   has_many :bookmark_posts, through: :bookmarks, source: :post
 

@@ -30,7 +30,6 @@
 
             <p class="bi bi-currency-yen">
               <%= @post.price %>
-              <!--%= render 'crud_menus', post: @post if current_user.own?(@post) %-->
               <% if current_user.own?(@post) %>
               　　　　　　　　　　　　　　　　　　　　　　　　　　　　
                 <%= render 'crud_menus', post: @post %>
