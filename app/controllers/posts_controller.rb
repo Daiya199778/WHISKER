@@ -61,6 +61,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :post_image, :post_image_cache, :price, :whiskey_brand, :country, :whiskey_type, countries_attributes: [:id, :name, :_destroy], whiskey_types_attributes: [:id, :name, :_destroy])
+    params.require(:post).permit(:title, :body, :post_image, :post_image_cache, :price, :whiskey_brand, countries_attributes: [:id, :name], whiskey_types_attributes: [:id, :name])
   end
 end
