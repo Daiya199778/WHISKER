@@ -23,6 +23,8 @@ class User < ApplicationRecord
   #if: 以降=> 登録したユーザがパスワード以外のプロフィール項目を更新したいとき、パスワードの入力を省略できるようになる。
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
 
+  enum role: { general: 0, admin: 1 }
+
   #ユーザーのコメントであるかを判定するメソッドを user モデルに追加する
   def own?(object)
     id == object.user_id
