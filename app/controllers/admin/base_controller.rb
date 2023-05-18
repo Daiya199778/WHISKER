@@ -13,7 +13,7 @@ class Admin::BaseController < ApplicationController
 
   #管理者権限がないユーザーを排除する目的で設定
   def check_admin
-    flash[:warning] = t('defaults.message.not_authorized'), unless current_user.admin?
-    redirect_to root_path
+    redirect_to root_path, warning: t('defaults.message.not_authorized') unless current_user.admin?
   end
+
 end
