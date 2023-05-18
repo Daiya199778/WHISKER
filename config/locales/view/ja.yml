@@ -3,6 +3,7 @@ ja:
     message:
       require_login: 'ログインしてください'
       delete_confirm: '削除してもよろしいですか？'
+      not_authorized: '権限がありません'
     guest_login: 'ゲストでログイン'
     login: 'ログイン'
     user_register: 'ユーザー登録'
@@ -100,3 +101,15 @@ ja:
     update:
       success: 'パスワードが変更されました'
       fail: 'パスワードが変更できませんでした'
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+    dashboards:
+      index:
+        title: 'ダッシュボード'
