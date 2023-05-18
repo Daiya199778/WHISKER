@@ -30,14 +30,6 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   get 'guest_login', to: 'user_sessions#guest_login'
 
-  #admin機能のルーティング
-  namespace :admin do
-    root 'dashboards#index'
-    get 'login', to: 'user_sessions#new'
-    post 'login', to: 'user_sessions#create'
-    delete 'logout', to: 'user_sessions#destroy'
-  end
-
   #google_位置情報
   get "search_shops", to: "search_shops#search"
 
@@ -57,5 +49,13 @@ Rails.application.routes.draw do
   resources :bookmarks, only: %i[create destroy]
   resources :profiles, only: %i[show edit update]
 
+  #admin機能のルーティング
+  namespace :admin do
+    root to: 'dashboards#index'
+    get 'login', to: 'user_sessions#new'
+    post 'login', to: 'user_sessions#create'
+    delete 'logout', to: 'user_sessions#destroy'
+  end
+  
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
