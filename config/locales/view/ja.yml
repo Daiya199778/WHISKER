@@ -102,7 +102,7 @@ ja:
       success: 'パスワードが変更されました'
       fail: 'パスワードが変更できませんでした'
   admin:
-    user_sessins:
+    user_sessions:
       new:
         title: 'ログイン'
       create:
