@@ -143,4 +143,4 @@
   https://www.figma.com/file/U0KtiDnEs35y7wF3LDsLYD/runteq_%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0-1&t=vfIVnUOpbMaZGNLB-0
 
 # ■ ER図
-  [![Image from Gyazo](https://i.gyazo.com/1f5683b385a2d4f479cc2b9c8febad41.png)](https://gyazo.com/1f5683b385a2d4f479cc2b9c8febad41)
+  [![Image from Gyazo](https://i.gyazo.com/a82c3d51c57b6b4d79f312fbbc4efb36.png)](https://gyazo.com/a82c3d51c57b6b4d79f312fbbc4efb36)
