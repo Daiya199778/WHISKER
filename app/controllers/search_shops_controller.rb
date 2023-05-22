@@ -1,6 +1,5 @@
 class SearchShopsController < ApplicationController
   skip_before_action :require_login
-  before_action :guest_check
 
   def search
     keyword = params[:keyword]

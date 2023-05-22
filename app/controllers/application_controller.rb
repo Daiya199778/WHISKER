@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
   
   def guest_check
-    if current_user.name == "ゲストユーザー"
+    if current_user.email == "guestuser.whisker@example.com"
        flash[:warning]= "ユーザー登録が必要です"
        redirect_to posts_path
     end
