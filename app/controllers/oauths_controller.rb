@@ -8,7 +8,7 @@ class OauthsController < ApplicationController
   def callback
     provider = auth_params[:provider]
     if auth_params[:denied].present?
-      redirect_to posts_path, success: 'Twitterアカウントでログインしました'
+      redirect_to login_path, warning: "Twitter認証をキャンセルしました"
       return
     end
 

@@ -74,7 +74,7 @@
     }
   }
 
-  function markerEvent(i) { //マーカをクリックしたときに吹き出しを表示
+  function markerEvent(i) { //検索圏内のショップのマーカーを全て表示させる。
     marker[i].addListener('click', function() {
       infoWindow[i].open(map, marker[i]);
     });
