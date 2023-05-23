@@ -73,18 +73,18 @@ gem 'enum_help'
 gem 'carrierwave'
 #画像のサイズ調整のためのgem
 gem 'mini_magick'
+#ページネーションのためのgem
 gem 'kaminari'
+#検索機能のgem
 gem 'ransack', '~> 3.2', '>= 3.2.1'
 #AWSで画像保存でするgem
 gem 'fog-aws'
 gem "aws-sdk-s3", require: false 
-#環境変数を管理するgem
+#環境変数を他に見られないように管理するgem
 gem 'dotenv-rails'
 #googleの位置情報機能のgem
-gem 'geocoder'
 gem 'gon'
 gem 'google_places'
-#認証機能のgem
+#認証関連のgem
 gem 'config'
-gem 'googleauth'
 gem 'omniauth-twitter'
