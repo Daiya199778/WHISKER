@@ -132,7 +132,7 @@
    - HTML
    - SCSS
    - CSSフレームワーク
-    - Bootstrap (5.2.3)
+     - Bootstrap (5.2.3)
 
   【インフラ】
    - Heroku
@@ -140,9 +140,9 @@
 
   【API】
    - Google Maps API
-    - Places_API
-    - Geocoding_API
-    - JavaScript_API
+     - Places_API
+     - Geocoding_API
+     - JavaScript_API
    - Twitter_API
 
 # ■ 画面遷移図
