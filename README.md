@@ -141,7 +141,6 @@
   【API】
    - Google Maps API
      - Places_API
-     - Geocoding_API
      - JavaScript_API
    - Twitter_API
 
