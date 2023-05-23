@@ -139,9 +139,11 @@
    - AWS（S3）
 
   【API】
-   - Google Geocoding API(ショップ検索機能で使用)
-   - Google MapsJavaScript API(ショップ検索機能で使用)
-   - OAuth2.0認証(Twitterログインで使用)
+   - Google Maps API
+    - Places_API
+    - Geocoding_API
+    - JavaScript_API
+   - Twitter_API
 
 # ■ 画面遷移図
   https://www.figma.com/file/U0KtiDnEs35y7wF3LDsLYD/runteq_%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0-1&t=vfIVnUOpbMaZGNLB-0
