@@ -1,0 +1,45 @@
+<% content_for(:title, t('.title')) %>
+<body class="flex-grow p-0">
+  <div class="container">
+    <!-- Portfolio Item Heading -->
+    <br>
+    <h1 class="my-4"><%= t('.title') %></h1>
+    <!-- Portfolio Item Row -->
+    <div class="row">
+      <div class="col-md-5">
+        <%= image_tag @post.post_image_url, class: 'card-img-top', size: '500x380' %>
+      </div>
+      <div class="col-lg-7">
+        <div class="card mb-3 mb-lg-0">
+          <div class="card-body">
+            <h6 class="my-0 bi bi-pencil-fill">[<%=t('activerecord.attributes.post.title')%>]</h6>
+            <div><%= @post.title %></div>
+            <hr>
+            <h6 class="my-0 bi bi-chat-square-text-fill">[<%=t('activerecord.attributes.post.body')%>]</h6>
+            <%= @post.body %>
+            <hr>
+            <p class="bi bi-trash2-fill"> <%= @post.whiskey_brand %></p>
+
+            <% @post.whiskey_types.each do |whiskey_type| %>
+              <p class="bi bi-bricks"> <%= whiskey_type.name %></p>
+            <% end %>
+
+            <% @post.countries.each do |country| %>
+              <p class="bi bi-globe-asia-australia"> <%= country.name %></p>
+            <% end %> 
+
+            <p class="bi bi-currency-yen">
+              <%= @post.price %>
+            </p>
+            <%= render 'crud_menus', post: @post %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="my-4">コメント</h3> 
+    <!-- コメントフォーム -->
+    <%#= render 'comments/form', { post: @post, comment: @comment } %>
+    <!-- コメントエリア -->
+    <%#= render 'comments/comments', { comments: @comments } %>
+  </div>
+</body>

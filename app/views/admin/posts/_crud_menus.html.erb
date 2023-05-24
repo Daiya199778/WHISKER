@@ -1,0 +1,6 @@
+<tr>
+  <td>
+    <%= link_to "編集", edit_admin_post_path(post), class: 'btn btn-success' %>
+    <%= link_to "削除", admin_post_path(post), method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: 'btn btn-danger' %>
+  </td>
+</tr>

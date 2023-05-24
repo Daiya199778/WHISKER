@@ -1,0 +1,38 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="post-id-<%= post.id %>">
+    <div class="col">
+      <div class="card shadow-sm">
+        <a><%= image_tag post.post_image_url, class: 'card-img-top', size: '700x300' %></a>
+        <div class="card-body">
+          <p class="card-text">
+            <%= link_to post.title, admin_post_path(post), class: "link-dark" %>
+          </p>
+          <p class="card-text">
+            <i class="bi bi-person-video"></i>
+            <%= post.user.name %>
+          </p>
+          <p class="card-text">
+            <i class="bi bi-calendar2-week"></i>
+            <%= l post.created_at, format: :long %>
+          </p>
+          <p class="card-text">
+            <i class="bi bi-trash2-fill"></i>
+            <%= post.whiskey_brand %>
+          </p>
+          <p class="card-text">
+            <% post.countries.each do |country| %>
+                <i class="bi bi-globe-asia-australia"></i>
+                <%= country.name %>
+            <% end %> 
+          </p>
+          <p class="card-text">
+            <% post.whiskey_types.each do |whiskey_type| %>
+              <i class="bi bi-bricks"></i>
+              <%= whiskey_type.name %>
+            <% end %> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
