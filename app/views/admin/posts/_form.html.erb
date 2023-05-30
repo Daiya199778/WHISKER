@@ -34,7 +34,7 @@
           <span class="bi bi-globe-asia-australia"></span>
           <%= f.fields_for :countries, post.countries do |country| %>
             <%= country.label :name %>
-            <%= country.select :name, Post.countries_i18n.invert, {}, class: 'form-select' %>
+            <%= country.select :name, Post.countries_i18n.invert, {}, class: 'form-control' %>
           <% end %>
         </div>
         <br>
@@ -42,7 +42,7 @@
           <span class="bi bi-bricks"></span>
           <%= f.fields_for :whiskey_types, post.whiskey_types do |whiskey_type| %>
             <%= whiskey_type.label :name %>
-            <%= whiskey_type.select :name, Post.whiskey_types_i18n.invert, {}, class: 'form-select' %>
+            <%= whiskey_type.select :name, Post.whiskey_types_i18n.invert, {}, class: 'form-control' %>
           <% end %>
         </div>
       </div>

@@ -13,6 +13,9 @@ ja:
     logout: 'ログアウト'
     comment: 'コメント'
     search_word: '検索ワード'
+    show: '詳細'
+    edit: '編集'
+    delete: '削除'
   users:
     new:
       title: '新規登録'
@@ -113,3 +116,12 @@ ja:
     dashboards:
       index:
         title: 'ダッシュボード'
+    users:
+      update:
+        success: 'ユーザー情報が変更されました'
+        fail: 'ユーザー情報が変更されませんでした'
+      destroy:
+        success: 'ユーザーを削除しました'
+        fail: 'ユーザーを削除できませんでした'
+      show:
+        role: '権限'
