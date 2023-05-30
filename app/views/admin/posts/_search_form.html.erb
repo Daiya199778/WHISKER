@@ -1,0 +1,37 @@
+<%= search_form_for @q, url: admin_posts_path do |f| %>
+  <div class="row">
+    <div class="form-inline align-items-center mx-auto">
+      <div class="col-auto">
+        <label for="Title" class="form-label">
+          <span>ユーザー検索</span>
+        </label>
+        <%= f.search_field :user_name_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+      </div>
+      <div class="col-auto">
+        <label for="Title" class="form-label">
+          <span>タイトル検索</span>
+        </label>
+        <%= f.search_field :title_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+      </div>
+      <div class="col-auto">
+        <label for="Title" class="form-label">
+          <span>内容検索</span>
+        </label>
+        <%= f.search_field :body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+      </div>
+      <div class="col-auto">
+        <label for="Title" class="form-label">
+          <span>銘柄検索</span>
+        </label>
+        <%= f.search_field :whiskey_brand_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+      </div>
+      <div class="col-auto">
+        <label for="Title" class="form-label">
+          <span>　</span>
+        </label>
+        <%= f.submit class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+   <hr class="my-4">
+<% end %>

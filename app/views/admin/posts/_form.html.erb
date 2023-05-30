@@ -1,0 +1,61 @@
+<div class="row g-0">
+  <%= form_with model: @post, url: admin_post_path(@post), local: true do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="row g-3">
+      <div class="col-8">
+        <div class="form-group">
+          <span class="bi bi-pencil-fill"></span>
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control mb-2', placeholder: 'タイトルを入力して下さい' %>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <span class="bi bi-trash2-fill"></span>
+          <%= f.label :whiskey_brand %>
+          <%= f.text_field :whiskey_brand, class: 'form-control', placeholder: '銘柄を入力して下さい　例：山崎' %>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="form-group">
+          <span class="bi bi-chat-square-text-fill"></span>
+          <%= f.label :body %>
+          <%= f.text_area :body, class: 'form-control mb-2', placeholder: '内容を入力して下さい', rows: 10 %>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <span class="bi bi-currency-yen"></span>
+          <%= f.label :price %>
+          <%= f.text_field :price, class: 'form-control', placeholder: '半角コンマなしで入力して下さい　例：1000' %>
+        </div>
+        <br>
+        <div class="form-group">
+          <span class="bi bi-globe-asia-australia"></span>
+          <%= f.fields_for :countries, post.countries do |country| %>
+            <%= country.label :name %>
+            <%= country.select :name, Post.countries_i18n.invert, {}, class: 'form-control' %>
+          <% end %>
+        </div>
+        <br>
+        <div class="form-group">
+          <span class="bi bi-bricks"></span>
+          <%= f.fields_for :whiskey_types, post.whiskey_types do |whiskey_type| %>
+            <%= whiskey_type.label :name %>
+            <%= whiskey_type.select :name, Post.whiskey_types_i18n.invert, {}, class: 'form-control' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="form-group">
+          <span class="bi bi-upload"></span>
+          <%= f.label :post_image %>
+          <%= f.file_field :post_image, class: 'form-control mb-5', accept: 'image/*' %>
+          <%= f.hidden_field :post_image_cache %>
+        </div>
+      </div>
+      <%= f.submit "投稿する", class: 'btn btn-secondary btn-lg fw-bold' %>
+    </div>
+    <br>
+  <% end %>
+</div>

@@ -1,0 +1,55 @@
+<% content_for(:title, t('.title')) %>
+<body class="flex-grow p-0">
+  <div class="container py-0">
+    <br>
+    <br>
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col col-lg-10 mb-2 mb-lg-2">
+        <h1 class><%= t('profiles.show.title')%></h1>
+        <hr>
+        <br>
+        <div class="card mb-4" style="border-radius: .5rem;">
+          <div class="row g-2">
+            <div class="col-md-4 gradient-custom text-center text-black"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <%= image_tag @user.avatar.url, class: 'rounded-circle', size: '50x50', alt: "Avatar", class: "img-fluid my-5", style: "width: 150px;" %>
+              <i class><h5><%= @user.name %></h5></i>
+              <% if current_user == @user %>
+                <%= link_to edit_profile_path do %>
+                  <i class="bi bi-pencil-square"></i>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6><%= t('profiles.show.information')%></h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-4 mb-4">
+                    <h6><%= t('profiles.show.email')%></h6>
+                    <p class="text-muted"><%= @user.email %></p>
+                  </div>
+                  <div class="col-4 mb-4">
+                    <h6><%= t('profiles.show.name')%></h6>
+                    <p class="text-muted"><%= @user.name %></p>
+                  </div>
+                  <div class="col-4 mb-4">
+                    <h6><%= t('admin.users.show.role')%></h6>
+                    <p class="text-muted"><%= @user.role_i18n %></p>
+                  </div>
+                </div>
+                <h6><%= t('profiles.show.introduction')%></h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-12 mb-5">
+                    <p class="text-muted"><%= @user.introduction %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

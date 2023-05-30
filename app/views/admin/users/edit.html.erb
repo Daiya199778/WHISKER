@@ -1,0 +1,52 @@
+<% content_for(:title, t('.title')) %>
+<body class="flex-grow p-0">
+  <div class="container py-0">
+    <br>
+    <br>
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col col-lg-10 mb-2 mb-lg-2">
+        <h1 class><%= t('profiles.edit.title')%></h1>
+        <hr>
+        <br>
+        <%= form_with model: @user, url: admin_user_path, local: true do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="text-left">
+                <%= image_tag @user.avatar.url, class: 'avatar img-circle img-thumbnail', alt: 'avatar', id: 'preview', size: '500' %>
+              </div>
+              <br>
+              <div class="text-center">
+                <div class="col-md-12">
+                  <%= f.file_field :avatar, onchange: 'previewFileWithId(preview)', class: 'form-control', accept: 'image/*' %>
+                  <%= f.hidden_field :avatar_cache %>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group col-lg-14">
+                <%= f.label :email %>
+                <%= f.email_field :email, class: 'form-control mb-4' %>
+              </div>
+              <div class="form-group col-lg-14">
+                <%= f.label :name %>
+                <%= f.text_field :name, class: 'form-control mb-4' %>
+              </div>
+              <div class="form-group col-lg-14">
+                <%= f.label :role %>
+                <%= f.select :role, User.roles_i18n.invert, {}, class: 'form-control mb-4' %>
+              </div>
+              <div class="form-group col-lg-14">
+                <%= f.label :introduction %>
+                <%= f.text_area :introduction, class: 'form-control mb-4', rows: '7' %>
+              </div>
+              <div class="btn-group-form">
+                <%= f.submit class: 'btn btn-secondary btn-lg fw-bold' %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>

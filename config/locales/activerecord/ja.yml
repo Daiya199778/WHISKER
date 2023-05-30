@@ -1,4 +1,9 @@
 ja:
+  enums:
+      user:
+        role:
+          general: '一般'
+          admin: '管理者'
   activerecord:
     models:
       comment: 'コメント'
@@ -12,6 +17,7 @@ ja:
         password_reset: '新しいパスワード'
         password_reset_confirmation: '新しいパスワードの確認'
         name: 'ニックネーム'
+        role: '権限'
         introduction: '自己紹介'
         avatar: 'アバター'
       post:
